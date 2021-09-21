@@ -1,7 +1,7 @@
 {
   "name": "nanocolors",
   "version": "0.1.2",
-  "description": "A tiny and fast Node.js library for formatting terminal text with ANSI colors",
+  "description": "2x times faster than chalk and use 5x less space in node_modules",
   "keywords": [
     "color",
     "colors",
