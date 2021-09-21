@@ -1,8 +1,16 @@
 {
   "name": "nanocolors",
   "version": "0.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "A tiny and fast Node.js library for formatting terminal text with ANSI colors",
+  "keywords": [
+    "color",
+    "colors",
+    "ansi",
+    "cli",
+    "console",
+    "terminal",
+    "chalk"
+  ],
   "author": "Andrey Sitnik <andrey@sitnik.ru>",
   "license": "MIT",
   "repository": "ai/nanocolors",
@@ -124,7 +132,16 @@
       " \\(by [^)]+\\)."
     ],
     "dictionary": [
-      "Versioning"
+      "Versioning",
+      "PostCSS",
+      "Browserslist",
+      "shakable",
+      "ESM",
+      "CJS",
+      "X1",
+      "chainable",
+      "strikethrough",
+      "js"
     ]
   },
   "sharec": {
