@@ -5,12 +5,16 @@ function showTime(name) {
   let after = performance.now()
   let time = (Math.round(1000 * (after - before)) / 1000).toString()
   let title = name.padEnd('kleur/colors  '.length)
-  process.stdout.write(title + '\x1B[1m' + time.padEnd(5) + '\x1B[22m ms\n')
+  process.stdout.write(title + '\x1B[1m' + time.padStart(6) + '\x1B[22m ms\n')
 }
 
 before = performance.now()
 let chalk = require('chalk')
 showTime('chalk')
+
+before = performance.now()
+let cliColor = require('cli-color')
+showTime('cli-color')
 
 before = performance.now()
 let ansi = require('ansi-colors')
@@ -27,10 +31,6 @@ showTime('kleur/colors')
 before = performance.now()
 let colorette = require('colorette')
 showTime('colorette')
-
-before = performance.now()
-let cliColor = require('cli-color')
-showTime('cliColor')
 
 before = performance.now()
 let nanocolors = require('../index')

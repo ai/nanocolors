@@ -37,6 +37,7 @@ Function calling time:
 ```
 $ ./test/benchmark.js
 chalk         11,680,127 ops/sec
+cli-color        762,942 ops/sec
 ansi-colors    3,654,108 ops/sec
 kleur         15,857,360 ops/sec
 kleur/colors  22,195,173 ops/sec
@@ -48,12 +49,13 @@ Library loading time:
 
 ```
 $ ./test/loading.js
-chalk         3.436 ms
-ansi-colors   1.083 ms
-kleur         1.167 ms
-kleur/colors  0.442 ms
-colorette     2.061 ms
-nanocolors    0.402 ms
+chalk          3.436 ms
+cli-color     20.741 ms
+ansi-colors    1.083 ms
+kleur          1.167 ms
+kleur/colors   0.442 ms
+colorette      2.061 ms
+nanocolors     0.402 ms
 ```
 
 The space in `node_modules` including sub-dependencies:
@@ -61,6 +63,7 @@ The space in `node_modules` including sub-dependencies:
 ```
 $ ./test/size.js
 chalk         192 KB
+cli-color    5120 KB
 ansi-colors    40 KB
 kleur          44 KB
 colorette      32 KB

@@ -22,6 +22,9 @@ suite
   .add('chalk', () => {
     chalk.red(chalk.bold('bold') + ' red')
   })
+  .add('cli-color', () => {
+    cliColor.red(cliColor.bold('bold') + ' red')
+  })
   .add('ansi-colors', () => {
     ansi.red(ansi.bold('bold') + ' red')
   })
@@ -33,9 +36,6 @@ suite
   })
   .add('colorette', () => {
     colorette.red(colorette.bold('bold') + ' red')
-  })
-  .add('cliColor', () => {
-    cliColor.red(cliColor.bold('bold') + ' red')
   })
   .add('nanocolors', () => {
     nanocolors.red(nanocolors.bold('bold') + ' red')

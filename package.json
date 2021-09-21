@@ -90,6 +90,12 @@
           "import/order": "off",
           "no-unused-vars": "off"
         }
+      },
+      {
+        "files": "test/size.js",
+        "rules": {
+          "security/detect-unsafe-regex": "off"
+        }
       }
     ]
   },
