@@ -80,7 +80,8 @@
     "extends": "@logux/eslint-config/ts",
     "rules": {
       "security/detect-non-literal-regexp": "off",
-      "jest/no-conditional-expect": "off"
+      "jest/no-conditional-expect": "off",
+      "no-extra-boolean-cast": "off"
     },
     "overrides": [
       {
