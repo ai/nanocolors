@@ -75,7 +75,7 @@ Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.8.
   + import { red, bold } from 'nanocolors'
   ```
 
-2. Change API calls:
+2. Unprefix calls:
 
   ```diff
   - chalk.red(text)
