@@ -6,6 +6,7 @@ let kleur = require('kleur')
 let kleurColors = require('kleur/colors')
 let chalk = require('chalk')
 let ansi = require('ansi-colors')
+let cliColor = require('cli-color')
 
 let nanocolors = require('../')
 
@@ -32,6 +33,9 @@ suite
   })
   .add('colorette', () => {
     colorette.red(colorette.bold('bold') + ' red')
+  })
+  .add('cliColor', () => {
+    cliColor.red(cliColor.bold('bold') + ' red')
   })
   .add('nanocolors', () => {
     nanocolors.red(nanocolors.bold('bold') + ' red')

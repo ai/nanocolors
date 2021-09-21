@@ -27,5 +27,6 @@ function benchmark(lib) {
 benchmark('chalk')
 benchmark('ansi-colors')
 benchmark('kleur')
+benchmark('cli-color')
 benchmark('colorette')
 benchmark('nanocolors')
