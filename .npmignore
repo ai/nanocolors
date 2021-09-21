@@ -5,3 +5,5 @@ yarn.lock
 test/
 tsconfig.json
 coverage/
+
+*.png
