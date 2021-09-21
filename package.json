@@ -1,6 +1,6 @@
 {
   "name": "nanocolors",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A tiny and fast Node.js library for formatting terminal text with ANSI colors",
   "keywords": [
     "color",
