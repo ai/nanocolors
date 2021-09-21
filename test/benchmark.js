@@ -20,9 +20,6 @@ suite
   .add('chalk', () => {
     chalk.red(chalk.bold('bold') + ' red')
   })
-  .add('nanocolors', () => {
-    nanocolors.red(nanocolors.bold('bold') + ' red')
-  })
   .add('ansi-colors', () => {
     ansi.red(ansi.bold('bold') + ' red')
   })
@@ -31,6 +28,9 @@ suite
   })
   .add('colorette', () => {
     colorette.red(colorette.bold('bold') + ' red')
+  })
+  .add('nanocolors', () => {
+    nanocolors.red(nanocolors.bold('bold') + ' red')
   })
   .on('cycle', event => {
     let name = event.target.name.padEnd('ansi-colors  '.length)
