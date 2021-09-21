@@ -67,7 +67,7 @@ cli-color    5120 KB
 ansi-colors    40 KB
 kleur          44 KB
 colorette      32 KB
-nanocolors     36 KB
+nanocolors     28 KB
 ```
 
 Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.8.
