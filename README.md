@@ -25,8 +25,9 @@ console.log(
 </p>
 
 API was heavily inspired
-by @jorgebucaran’s [`colorette`](https://github.com/jorgebucaran/colorette)
-with few cool hacks copied from @lukeed’s
+by [**@jorgebucaran**](https://github.com/jorgebucaran/)’s
+[`colorette`](https://github.com/jorgebucaran/colorette) with few cool hacks
+copied from [**@lukeed**](https://github.com/lukeed/)’s
 [`kleur`](https://github.com/lukeed/kleur).
 
 <a href="https://evilmartians.com/?utm_source=nanocolors">
