@@ -31,6 +31,8 @@ console.log(
 
 ## Benchmarks
 
+Function calling time:
+
 ```
 $ ./test/benchmark.js
 chalk         8,142,778 ops/sec
@@ -39,6 +41,8 @@ kleur        11,299,102 ops/sec
 colorette    14,852,996 ops/sec
 nanocolors   14,897,991 ops/sec
 ```
+
+Library loading time:
 
 ```
 $ ./test/loading.js
@@ -49,15 +53,18 @@ colorette    0.848 ms
 nanocolors   0.571 ms
 ```
 
+The space in `node_modules` including sub-dependencies:
+
 ```
 $ ./test/size.js
 chalk         192 KB
 ansi-colors    40 KB
 kleur          44 KB
 colorette      32 KB
+nanocolors     36 KB
 ```
 
-Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.9.
+Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.8.
 
 ## API
 
