@@ -3,9 +3,9 @@
 let before
 function showTime(name) {
   let after = performance.now()
-  let time = Math.round(1000 * (after - before)) / 1000
+  let time = (Math.round(1000 * (after - before)) / 1000).toString()
   let title = name.padEnd('ansi-colors  '.length)
-  process.stdout.write(title + '\x1B[1m' + time + '\x1B[22m ms\n')
+  process.stdout.write(title + '\x1B[1m' + time.padEnd(5) + '\x1B[22m ms\n')
 }
 
 before = performance.now()
