@@ -150,7 +150,9 @@
       "chainable",
       "strikethrough",
       "js",
-      "Unprefix"
+      "Unprefix",
+      "jorgebucaran’s",
+      "lukeed’s"
     ]
   },
   "sharec": {
