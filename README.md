@@ -66,6 +66,24 @@ nanocolors     36 KB
 
 Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.8.
 
+## Replacing `chalk`
+
+1. Change an import statement
+  ```js
+  // import chalk from 'chalk'
+  import { red, bold } from 'nanocolors' 
+  ```
+2. Change API calls 
+  ```js 
+  // chalk.red(text) 
+  red(text)
+  ```
+3. Unwrap method call chains
+  ```js
+  // chalk.red.bold(text)
+  red(bold(text))
+  ```
+
 ## API
 
 ### Individual Colors
