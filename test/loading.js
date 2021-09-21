@@ -29,5 +29,9 @@ let colorette = require('colorette')
 showTime('colorette')
 
 before = performance.now()
+let cliColor = require('cli-color')
+showTime('cliColor')
+
+before = performance.now()
 let nanocolors = require('../index')
 showTime('nanocolors')
