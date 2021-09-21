@@ -1,3 +1,4 @@
+delete process.env.CI
 process.env.TERM = 'dumb'
 Object.defineProperty(process, 'platform', {
   value: 'win32'

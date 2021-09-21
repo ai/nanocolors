@@ -1,3 +1,4 @@
+delete process.env.CI
 process.env.TERM = 'dumb'
 
 let { red, createColors, isColorSupported } = require('../index')
