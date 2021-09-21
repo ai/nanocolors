@@ -13,7 +13,11 @@ function getSize(lib) {
   execSync(`yarn add ${lib}`, { cwd: testDir })
   let out = execSync(`du -sh node_modules/`, { cwd: testDir }).toString()
   rmSync(testDir, { recursive: true, force: true })
-  return out.match(/^(\d+)K/)[1]
+  if (out.includes('M')) {
+    return String(parseFloat(out.match(/^(\d+(,\d+)?)M/)[1]) * 1024)
+  } else {
+    return out.match(/^(\d+)K/)[1]
+  }
 }
 
 function benchmark(lib) {
@@ -25,8 +29,8 @@ function benchmark(lib) {
 }
 
 benchmark('chalk')
+benchmark('cli-color')
 benchmark('ansi-colors')
 benchmark('kleur')
-benchmark('cli-color')
 benchmark('colorette')
 benchmark('nanocolors')
