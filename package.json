@@ -11,13 +11,17 @@
     "node": "^12.0.0 || ^14.0.0 || >=16.0.0"
   },
   "types": "./index.d.ts",
+  "browser": {
+    "./index.js": "./index.browser.js"
+  },
   "scripts": {
-    "test": "jest --coverage && eslint . && size-limit && yaspeller *.md"
+    "test": "jest --coverage && eslint . && size-limit && yaspeller *.md && print-snapshots"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@logux/eslint-config": "^45.4.7",
     "@logux/sharec-config": "^0.11.0",
+    "@size-limit/dual-publish": "^5.0.3",
     "@size-limit/preset-small-lib": "^5.0.3",
     "@types/jest": "^27.0.1",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
@@ -32,10 +36,11 @@
     "eslint-plugin-prefer-let": "^1.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-unicorn": "^35.0.0",
+    "eslint-plugin-unicorn": "^36.0.0",
     "jest": "^27.1.0",
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
+    "print-snapshots": "^0.3.2",
     "simple-git-hooks": "^2.6.1",
     "size-limit": "^5.0.3",
     "ts-jest": "^27.0.5",
@@ -58,17 +63,21 @@
     }
   },
   "eslintConfig": {
-    "extends": "@logux/eslint-config/ts"
+    "extends": "@logux/eslint-config/ts",
+    "rules": {
+      "security/detect-non-literal-regexp": "off",
+      "jest/no-conditional-expect": "off"
+    }
   },
   "size-limit": [
     {
       "name": "Minimum",
-      "import": "{ }",
-      "limit": "0 B"
+      "import": "{ red }",
+      "limit": "10 B"
     },
     {
       "name": "All",
-      "limit": "17 B"
+      "limit": "421 B"
     }
   ],
   "simple-git-hooks": {
