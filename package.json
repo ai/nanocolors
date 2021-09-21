@@ -141,7 +141,8 @@
       "X1",
       "chainable",
       "strikethrough",
-      "js"
+      "js",
+      "Unprefix"
     ]
   },
   "sharec": {
