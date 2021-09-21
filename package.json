@@ -72,7 +72,17 @@
     "rules": {
       "security/detect-non-literal-regexp": "off",
       "jest/no-conditional-expect": "off"
-    }
+    },
+    "overrides": [
+      {
+        "files": "test/loading.js",
+        "rules": {
+          "import/newline-after-import": "off",
+          "import/order": "off",
+          "no-unused-vars": "off"
+        }
+      }
+    ]
   },
   "size-limit": [
     {
