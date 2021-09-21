@@ -68,21 +68,27 @@ Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.8.
 
 ## Replacing `chalk`
 
-1. Change an import statement
-  ```js
-  // import chalk from 'chalk'
-  import { red, bold } from 'nanocolors' 
+1. Change an import statement:
+
+  ```diff
+  - import chalk from 'chalk'
+  + import { red, bold } from 'nanocolors'
   ```
-2. Change API calls 
-  ```js 
-  // chalk.red(text) 
-  red(text)
+
+2. Change API calls:
+
+  ```diff
+  - chalk.red(text)
+  + red(text)
   ```
-3. Unwrap method call chains
-  ```js
-  // chalk.red.bold(text)
-  red(bold(text))
+
+3. Replace chains to nested calls:
+
+  ```diff
+  - chalk.red.bold(text)
+  + red(bold(text))
   ```
+
 
 ## API
 
