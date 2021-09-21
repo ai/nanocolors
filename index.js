@@ -18,29 +18,23 @@ let isColorSupported =
 
 let nope = s => s
 
-function raw(open, close, searchRegex, replaceValue) {
-  return (s = '') => {
+function color(openCode, closeCode) {
+  let open = `\x1b[${openCode}m`
+  let close = `\x1b[${closeCode}m`
+
+  return s => {
     if (s === '') {
       return s
     } else {
       return (
         open +
-        (~(s += '').indexOf(close, 4) // skip opening \x1b[
-          ? s.replace(searchRegex, replaceValue)
+        (!!~('' + s).indexOf(close, 4)
+          ? s.replace(new RegExp(`\\x1b\\[${closeCode}m`, 'g'), open)
           : s) +
         close
       )
     }
   }
-}
-
-function color(open, close) {
-  return raw(
-    `\x1b[${open}m`,
-    `\x1b[${close}m`,
-    new RegExp(`\\x1b\\[${close}m`, 'g'),
-    `\x1b[${open}m`
-  )
 }
 
 function createColors(enabled = isColorSupported) {
@@ -50,8 +44,8 @@ function createColors(enabled = isColorSupported) {
 
       // Modifiers
       reset: color(0, 0),
-      bold: raw('\x1b[1m', '\x1b[22m', /\\x1b\[22m/g, '\x1b[22m\x1b[1m'),
-      dim: raw('\x1b[2m', '\x1b[22m', /\\x1b\[22m/g, '\x1b[22m\x1b[2m'),
+      bold: color(1, 22),
+      dim: color(2, 22),
       italic: color(3, 23),
       underline: color(4, 24),
       inverse: color(7, 27),

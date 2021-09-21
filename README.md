@@ -36,26 +36,26 @@ Function calling time:
 
 ```
 $ ./test/benchmark.js
-chalk         11,680,127 ops/sec
-cli-color        762,942 ops/sec
-ansi-colors    3,654,108 ops/sec
-kleur         15,857,360 ops/sec
-kleur/colors  22,195,173 ops/sec
-colorette     20,630,562 ops/sec
-nanocolors    20,681,984 ops/sec
+chalk         11,608,010 ops/sec
+cli-color        752,419 ops/sec
+ansi-colors    3,601,857 ops/sec
+kleur         15,185,239 ops/sec
+kleur/colors  21,113,231 ops/sec
+colorette     19,712,884 ops/sec
+nanocolors    21,176,376 ops/sec
 ```
 
 Library loading time:
 
 ```
 $ ./test/loading.js
-chalk          3.436 ms
-cli-color     20.741 ms
-ansi-colors    1.083 ms
-kleur          1.167 ms
-kleur/colors   0.442 ms
-colorette      2.061 ms
-nanocolors     0.402 ms
+chalk          3.465 ms
+cli-color     21.849 ms
+ansi-colors    1.101 ms
+kleur          1.628 ms
+kleur/colors   0.508 ms
+colorette      2.610 ms
+nanocolors     0.486 ms
 ```
 
 The space in `node_modules` including sub-dependencies:
