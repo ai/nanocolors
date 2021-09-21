@@ -54,7 +54,7 @@ export const isColorSupported: boolean
  * @param enabled Do we need to enable colors. On `undefined` we will try
  *                to detect color support.
  */
-export function createColors(enabled: boolean | undefined): Colors
+export function createColors(enabled?: boolean): Colors
 
 // Modifiers
 export const reset: Color
