@@ -9,7 +9,7 @@ A tiny and fast Node.js library for formatting terminal text with ANSI colors.
 * **No dependencies.** It takes 5 times less space in `node_modules`
   than `chalk`.
 * **Auto-detects color support.** You can also toggle color mode manually.
-* **Tree-shakable.** We use dual ESM/CJS package.
+* **Tree-shakable.** We use a dual ESM/CJS package.
 
 ```js
 import { green, bold } from 'nanocolors'
