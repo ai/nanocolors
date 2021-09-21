@@ -39,7 +39,7 @@
     "chalk": "^4.1.2",
     "clean-publish": "^2.2.0",
     "colorette": "^2.0.2",
-    "dual-publish": "^1.0.8",
+    "dual-publish": "^1.0.9",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.2",
