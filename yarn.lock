@@ -1812,10 +1812,10 @@ colorette@^1.2.2, colorette@^1.3.0, colorette@^1.4.0:
   resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.4.0.tgz#5190fbb87276259a86ad700bff2c6d6faa3fca40"
   integrity sha512-Y2oEozpomLn7Q3HFP7dpww7AtMJplbM9lGZP6RDfHqmbeRjiwRg4n6VM6j4KLmRke85uWEI7JqF17f3pqdRA0g==
 
-colorette@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/colorette/-/colorette-2.0.4.tgz#d3f3e81ec242623cb103adfb75fcd192d1559b5e"
-  integrity sha512-mw9BGVqQa4f0jnWK5SGce3XA5qRklGBSkX9Ka6EBkPA3P8zPX/QC9BlLI803b8Jy27qA9HpUxhy1GxYTID1xYA==
+colorette@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/colorette/-/colorette-2.0.5.tgz#e9257d0a938e2340d3d4942bde308b1016721c84"
+  integrity sha512-rPmg56Y2iDrBBoQN9A8TwkXpIKtk0dWo2PZvIK1AcY6SLdIbgg0mtLm+o0MQFHZhiMQ6cVgL+wkTEO9XPPM4Wg==
 
 combined-stream@^1.0.8:
   version "1.0.8"
