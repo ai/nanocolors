@@ -68,7 +68,7 @@ Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.8.
 
 ## Replacing `chalk`
 
-1. Change an import statement:
+1. Replace import and use named exports:
 
   ```diff
   - import chalk from 'chalk'
