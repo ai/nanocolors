@@ -24,6 +24,11 @@ console.log(
   <img src="./example.png" alt="Nano Colors output" width="600">
 </p>
 
+API was heavily inspired
+by @jorgebucaran’s [`colorette`](https://github.com/jorgebucaran/colorette)
+with few cool hacks copied from @lukeed’s
+[`kleur`](https://github.com/lukeed/kleur).
+
 <a href="https://evilmartians.com/?utm_source=nanocolors">
   <img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg"
        alt="Sponsored by Evil Martians" width="236" height="54">
@@ -148,10 +153,3 @@ const { red } = createColors(options.enableColors)
 
 On `undefined` argument, `createColors` will use value
 from color support auto-detection.
-
-
-## Thanks
-
-API design was inspired
-by [`colorette`](https://github.com/jorgebucaran/colorette)
-and [`kleur`](https://github.com/lukeed/kleur).
