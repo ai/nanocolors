@@ -20,7 +20,7 @@ console.log(
 ```
 
 <p align="center">
-  <img src="./example.png" alt="Nano Colors output" width="738">
+  <img src="./example.png" alt="Nano Colors output" width="550">
 </p>
 
 <a href="https://evilmartians.com/?utm_source=nanocolors">
