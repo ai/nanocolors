@@ -70,24 +70,24 @@ Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.8.
 
 1. Replace import and use named exports:
 
-  ```diff
-  - import chalk from 'chalk'
-  + import { red, bold } from 'nanocolors'
-  ```
+   ```diff
+   - import chalk from 'chalk'
+   + import { red, bold } from 'nanocolors'
+   ```
 
 2. Unprefix calls:
 
-  ```diff
-  - chalk.red(text)
-  + red(text)
-  ```
+   ```diff
+   - chalk.red(text)
+   + red(text)
+   ```
 
 3. Replace chains to nested calls:
 
-  ```diff
-  - chalk.red.bold(text)
-  + red(bold(text))
-  ```
+   ```diff
+   - chalk.red.bold(text)
+   + red(bold(text))
+   ```
 
 
 ## API
