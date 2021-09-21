@@ -1795,10 +1795,10 @@ colorette@^1.2.2, colorette@^1.3.0, colorette@^1.4.0:
   resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.4.0.tgz#5190fbb87276259a86ad700bff2c6d6faa3fca40"
   integrity sha512-Y2oEozpomLn7Q3HFP7dpww7AtMJplbM9lGZP6RDfHqmbeRjiwRg4n6VM6j4KLmRke85uWEI7JqF17f3pqdRA0g==
 
-colorette@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/colorette/-/colorette-2.0.2.tgz#f04cbc7f59ffc4f33ba4da0702dd4c8a68885d91"
-  integrity sha512-iO5Ycn8HKVhTGGKpwJtyzrrvOGI9YC4u4dppP5yKSGP47ApaZNwX7ne4PtgpTzq+JBwQh6FrdAfCSYTBQe1+FA==
+colorette@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/colorette/-/colorette-2.0.4.tgz#d3f3e81ec242623cb103adfb75fcd192d1559b5e"
+  integrity sha512-mw9BGVqQa4f0jnWK5SGce3XA5qRklGBSkX9Ka6EBkPA3P8zPX/QC9BlLI803b8Jy27qA9HpUxhy1GxYTID1xYA==
 
 combined-stream@^1.0.8:
   version "1.0.8"
@@ -4731,9 +4731,9 @@ nan@^2.12.1:
   integrity sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==
 
 nanocolors@^0.1.0:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/nanocolors/-/nanocolors-0.1.1.tgz#1b148b06c6279084709675fb3d699e0cdc668114"
-  integrity sha512-9XCSSmaAkJVops0tOTkt1lUXO8iO7vTYr1X45I8kCbgP2cMS9RvPGVnp/Ou+ISsm9JhKpKCON7zwOFyWcWrzhA==
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/nanocolors/-/nanocolors-0.1.2.tgz#5ab92baf387c9d0d68feb3ce798f235882671faf"
+  integrity sha512-uOh+wwz+9+MWa4W7emZcvz9tNlGrkNR9RmnZnbvJG95OsXeWJwqUyYKvDvA3bJHnEW2CTdOCV92DTMBCqyweJg==
 
 nanoid@^3.1.23, nanoid@^3.1.25:
   version "3.1.25"
