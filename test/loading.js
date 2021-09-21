@@ -4,7 +4,7 @@ let before
 function showTime(name) {
   let after = performance.now()
   let time = (Math.round(1000 * (after - before)) / 1000).toString()
-  let title = name.padEnd('ansi-colors  '.length)
+  let title = name.padEnd('kleur/colors  '.length)
   process.stdout.write(title + '\x1B[1m' + time.padEnd(5) + '\x1B[22m ms\n')
 }
 
@@ -19,6 +19,10 @@ showTime('ansi-colors')
 before = performance.now()
 let kleur = require('kleur')
 showTime('kleur')
+
+before = performance.now()
+let kleurColors = require('kleur/colors')
+showTime('kleur/colors')
 
 before = performance.now()
 let colorette = require('colorette')
