@@ -1,31 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`prints colors 1`] = `
-"[1m[0mreset[0m
-[1mbold[22m
-[2mdim[22m
-[3mitalic[23m
-[4munderline[24m
-[7minverse[27m
-[8mhidden[28m
-[9mstrikethrough[29m
-[30mblack[39m
-[31mred[39m
-[32mgreen[39m
-[33myellow[39m
-[34mblue[39m
-[35mmagenta[39m
-[36mcyan[39m
-[37mwhite[39m
-[90mgray[39m
-[40mbgBlack[49m
-[41mbgRed[49m
-[42mbgGreen[49m
-[43mbgYellow[49m
-[44mbgBlue[49m
-[45mbgMagenta[49m
-[46mbgCyan[49m
-[47mbgWhite[49m"
+"[1mreset         [0mreset[0m
+bold          [1mbold[22m
+dim           [2mdim[22m
+italic        [3mitalic[23m
+underline     [4munderline[24m
+inverse       [7minverse[27m
+hidden        [8mhidden[28m
+strikethrough [9mstrikethrough[29m
+black         [30mblack[39m
+red           [31mred[39m
+green         [32mgreen[39m
+yellow        [33myellow[39m
+blue          [34mblue[39m
+magenta       [35mmagenta[39m
+cyan          [36mcyan[39m
+white         [37mwhite[39m
+gray          [90mgray[39m
+bgBlack       [40mbgBlack[49m
+bgRed         [41mbgRed[49m
+bgGreen       [42mbgGreen[49m
+bgYellow      [43mbgYellow[49m
+bgBlue        [44mbgBlue[49m
+bgMagenta     [45mbgMagenta[49m
+bgCyan        [46mbgCyan[49m
+bgWhite       [47mbgWhite[49m"
 `;
 
 exports[`supports nested colors 1`] = `"[32ma [31mb[32m c[39m"`;

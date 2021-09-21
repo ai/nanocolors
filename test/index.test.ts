@@ -6,8 +6,8 @@ it('prints colors', () => {
   let output = Object.entries(colors)
     .filter(([name]) => name !== 'isColorSupported' && name !== 'reset')
     .reduce(
-      (all, [name, fn]) => `${all}\n${fn(name)}`,
-      `\x1b[1m${colors.reset('reset')}`
+      (all, [name, fn]) => `${all}\n${name.padEnd(13)} ${fn(name)}`,
+      `\x1b[1mreset         ${colors.reset('reset')}`
     )
   expect(output).toMatchSnapshot()
 })
