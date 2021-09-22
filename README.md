@@ -9,7 +9,7 @@ A tiny and fast Node.js library for formatting terminal text with ANSI colors.
   like PostCSS or Browserslist.
 * **Auto-detects color support.** You can also toggle color mode manually.
 * **Tree-shakable.** We use a dual ESM/CJS package.
-* Supports universal Node.js/browser projects.
+* Supports Deno and universal Node.js/browser projects.
 
 ```js
 import { green, bold } from 'nanocolors'
@@ -153,3 +153,12 @@ const { red } = createColors(options.enableColors)
 
 On `undefined` argument, `createColors` will use value
 from color support auto-detection.
+
+
+### Deno
+
+Nano Colors has build-in Deno support.
+
+```js
+import { red } from 'https://deno.land/x/nanocolors/mod.ts'
+```
