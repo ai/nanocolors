@@ -80,9 +80,9 @@
     "extends": "@logux/eslint-config/ts",
     "rules": {
       "@typescript-eslint/restrict-plus-operands": "off",
-      "security/detect-non-literal-regexp": "off",
       "jest/no-conditional-expect": "off",
-      "no-extra-boolean-cast": "off"
+      "no-extra-boolean-cast": "off",
+      "no-control-regex": "off"
     },
     "overrides": [
       {
@@ -109,7 +109,7 @@
     },
     {
       "name": "All",
-      "limit": "425 B"
+      "limit": "424 B"
     }
   ],
   "simple-git-hooks": {

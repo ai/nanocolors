@@ -37,54 +37,61 @@ function hasClosed(s: string | number, close: string): s is string {
   return !!~("" + s).indexOf(close, 4);
 }
 
-function color(openCode: number, closeCode: number): Color {
-  let open = `\x1b[${openCode}m`;
-  let close = `\x1b[${closeCode}m`;
-
+function color(open: string, close: string, closeRegex: RegExp): Color {
   return (s) => {
     if (s === "") {
       return s;
     } else {
       return (
         open +
-        (hasClosed(s, close)
-          ? s.replace(new RegExp(`\\x1b\\[${closeCode}m`, "g"), open)
-          : s) +
+        (hasClosed(s, close) ? s.replace(closeRegex, open) : s) +
         close
       );
     }
   };
 }
 
+let end22 = /\x1b\[22m/g;
+let end23 = /\x1b\[23m/g;
+let end24 = /\x1b\[24m/g;
+let end27 = /\x1b\[27m/g;
+let end28 = /\x1b\[28m/g;
+let end29 = /\x1b\[29m/g;
+let end39 = /\x1b\[39m/g;
+let end49 = /\x1b\[49m/g;
+
+let close39 = "\x1b[39m";
+let close49 = "\x1b[49m";
+
 export function createColors(enabled = isColorSupported): Colors {
   if (enabled) {
     return {
       isColorSupported: true,
-      reset: color(0, 0),
-      bold: color(1, 22),
-      dim: color(2, 22),
-      italic: color(3, 23),
-      underline: color(4, 24),
-      inverse: color(7, 27),
-      hidden: color(8, 28),
-      strikethrough: color(9, 29),
-      black: color(30, 39),
-      red: color(31, 39),
-      green: color(32, 39),
-      yellow: color(33, 39),
-      blue: color(34, 39),
-      magenta: color(35, 39),
-      cyan: color(36, 39),
-      white: color(37, 39),
-      gray: color(90, 39),
-      bgBlack: color(40, 49),
-      bgRed: color(41, 49),
-      bgGreen: color(42, 49),
-      bgYellow: color(43, 49),
-      bgBlue: color(44, 49),
-      bgMagenta: color(45, 49),
-      bgCyan: color(46, 49),
-      bgWhite: color(47, 49),
+      reset: (s) => `\x1b[0m${s}\x1b[0m`,
+      bold: color("\x1b[1m", "\x1b[22m", end29),
+      dim: color("\x1b[2m", "\x1b[22m", end22),
+      italic: color("\x1b[3m", "\x1b[23m", end23),
+      underline: color("\x1b[4m", "\x1b[24m", end24),
+      inverse: color("\x1b[7m", "\x1b[27m", end27),
+      hidden: color("\x1b[8m", "\x1b[28m", end28),
+      strikethrough: color("\x1b[9m", "\x1b[29m", end29),
+      black: color("\x1b[30m", close39, end39),
+      red: color("\x1b[31m", close39, end39),
+      green: color("\x1b[32m", close39, end39),
+      yellow: color("\x1b[33m", close39, end39),
+      blue: color("\x1b[34m", close39, end39),
+      magenta: color("\x1b[35m", close39, end39),
+      cyan: color("\x1b[36m", close39, end39),
+      white: color("\x1b[37m", close39, end39),
+      gray: color("\x1b[90m", close39, end39),
+      bgBlack: color("\x1b[40m", close49, end49),
+      bgRed: color("\x1b[41m", close49, end49),
+      bgGreen: color("\x1b[42m", close49, end49),
+      bgYellow: color("\x1b[43m", close49, end49),
+      bgBlue: color("\x1b[44m", close49, end49),
+      bgMagenta: color("\x1b[45m", close49, end49),
+      bgCyan: color("\x1b[46m", close49, end49),
+      bgWhite: color("\x1b[47m", close49, end49),
     };
   } else {
     return {
