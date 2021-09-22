@@ -60,8 +60,6 @@ export function createColors(enabled = isColorSupported): Colors {
   if (enabled) {
     return {
       isColorSupported: true,
-
-      // Modifiers
       reset: color(0, 0),
       bold: color(1, 22),
       dim: color(2, 22),
@@ -70,8 +68,6 @@ export function createColors(enabled = isColorSupported): Colors {
       inverse: color(7, 27),
       hidden: color(8, 28),
       strikethrough: color(9, 29),
-
-      // Colors
       black: color(30, 39),
       red: color(31, 39),
       green: color(32, 39),
@@ -81,8 +77,6 @@ export function createColors(enabled = isColorSupported): Colors {
       cyan: color(36, 39),
       white: color(37, 39),
       gray: color(90, 39),
-
-      // Background
       bgBlack: color(40, 49),
       bgRed: color(41, 49),
       bgGreen: color(42, 49),
@@ -103,8 +97,6 @@ export function createColors(enabled = isColorSupported): Colors {
       inverse: nope,
       hidden: nope,
       strikethrough: nope,
-
-      // Colors
       black: nope,
       red: nope,
       green: nope,
@@ -114,8 +106,6 @@ export function createColors(enabled = isColorSupported): Colors {
       cyan: nope,
       white: nope,
       gray: nope,
-
-      // Background
       bgBlack: nope,
       bgRed: nope,
       bgGreen: nope,
