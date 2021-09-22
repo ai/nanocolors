@@ -157,7 +157,7 @@ from color support auto-detection.
 
 ### Deno
 
-Nano Colors has build-in Deno support.
+Nano Colors has build-in [Deno support](https://deno.land/x/nanocolors).
 
 ```js
 import { red } from 'https://deno.land/x/nanocolors/mod.ts'
