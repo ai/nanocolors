@@ -1,6 +1,11 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.1.3
+* Added Deno support.
+* Improved performance.
+* Improved docs (by Alexey Migutsky and Marco Carvalho).
+
 ## 0.1.2
 * Fixed types (by Anton Kastritskiy).
 
