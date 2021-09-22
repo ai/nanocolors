@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.1.6
+* Add odd Node.js versions support.
+
 ## 0.1.5
 * Fixed ESM support.
 
