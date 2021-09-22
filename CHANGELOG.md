@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.1.4
+* Reduced package size.
+
 ## 0.1.3
 * Added Deno support.
 * Improved performance.
