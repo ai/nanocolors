@@ -29,31 +29,7 @@ export interface Colors {
   bgWhite: Color
 }
 
-/**
- * Does environment support color output.
- *
- * ```js
- * import { isColorSupported } from 'nanocolors'
- *
- * if (isColorSupported) {
- *   console.log('With colors')
- * }
- * ```
- */
 export const isColorSupported: boolean
-
-/**
- * A way to overwrite color support autodetection.
- *
- * ```js
- * import { createColors } from 'nanocolors'
- *
- * const { red } = createColors(options.enableColors)
- * ```
- *
- * @param enabled Do we need to enable colors. On `undefined` we will try
- *                to detect color support.
- */
 export function createColors(enabled?: boolean): Colors
 
 // Modifiers
