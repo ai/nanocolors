@@ -35,7 +35,7 @@ let bgWhite = nope
 
 function createColors() {
   return {
-    isColorSupported: false,
+    isColorSupported,
     reset,
     bold,
     dim,
