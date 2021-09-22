@@ -1,8 +1,6 @@
 let nope = s => String(s)
 
 let isColorSupported = false
-
-// Modifiers
 let reset = nope
 let bold = nope
 let dim = nope
@@ -11,8 +9,6 @@ let underline = nope
 let inverse = nope
 let hidden = nope
 let strikethrough = nope
-
-// Colors
 let black = nope
 let red = nope
 let green = nope
@@ -22,8 +18,6 @@ let magenta = nope
 let cyan = nope
 let white = nope
 let gray = nope
-
-// Background
 let bgBlack = nope
 let bgRed = nope
 let bgGreen = nope

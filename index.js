@@ -41,8 +41,6 @@ function createColors(enabled = isColorSupported) {
   if (enabled) {
     return {
       isColorSupported: true,
-
-      // Modifiers
       reset: color(0, 0),
       bold: color(1, 22),
       dim: color(2, 22),
@@ -51,8 +49,6 @@ function createColors(enabled = isColorSupported) {
       inverse: color(7, 27),
       hidden: color(8, 28),
       strikethrough: color(9, 29),
-
-      // Colors
       black: color(30, 39),
       red: color(31, 39),
       green: color(32, 39),
@@ -62,8 +58,6 @@ function createColors(enabled = isColorSupported) {
       cyan: color(36, 39),
       white: color(37, 39),
       gray: color(90, 39),
-
-      // Background
       bgBlack: color(40, 49),
       bgRed: color(41, 49),
       bgGreen: color(42, 49),
@@ -84,8 +78,6 @@ function createColors(enabled = isColorSupported) {
       inverse: nope,
       hidden: nope,
       strikethrough: nope,
-
-      // Colors
       black: nope,
       red: nope,
       green: nope,
@@ -95,8 +87,6 @@ function createColors(enabled = isColorSupported) {
       cyan: nope,
       white: nope,
       gray: nope,
-
-      // Background
       bgBlack: nope,
       bgRed: nope,
       bgGreen: nope,

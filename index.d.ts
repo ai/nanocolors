@@ -31,8 +31,6 @@ export interface Colors {
 
 export const isColorSupported: boolean
 export function createColors(enabled?: boolean): Colors
-
-// Modifiers
 export const reset: Color
 export const bold: Color
 export const dim: Color
@@ -41,8 +39,6 @@ export const underline: Color
 export const inverse: Color
 export const hidden: Color
 export const strikethrough: Color
-
-// Colors
 export const black: Color
 export const red: Color
 export const green: Color
@@ -52,8 +48,6 @@ export const magenta: Color
 export const cyan: Color
 export const white: Color
 export const gray: Color
-
-// Background
 export const bgBlack: Color
 export const bgRed: Color
 export const bgGreen: Color
