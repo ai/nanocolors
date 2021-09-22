@@ -30,10 +30,17 @@ it('disables colors', () => {
 
 it('copies all methods', () => {
   let created = Object.keys(main.createColors(true))
-  expect(Object.keys(main)).toEqual(created.concat(['createColors']))
+  expect(Object.keys(main).sort()).toEqual(
+    created.concat(['createColors']).sort()
+  )
 })
 
 it('does not add modifiers to empty string', () => {
   let { green } = main.createColors(true)
   expect(green('')).toEqual('')
+})
+
+it('converts number to string on disabled colors', () => {
+  let noColors = main.createColors(false)
+  expect(typeof noColors.red(1)).toEqual('string')
 })

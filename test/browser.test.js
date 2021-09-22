@@ -21,3 +21,7 @@ it('copies all methods', () => {
   expect(Object.keys(browser)).toEqual(created.concat(['createColors']))
   expect(Object.keys(browser)).toEqual(Object.keys(main))
 })
+
+it('converts number to string', () => {
+  expect(typeof browser.red(1)).toEqual('string')
+})

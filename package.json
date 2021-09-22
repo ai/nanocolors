@@ -79,6 +79,7 @@
   "eslintConfig": {
     "extends": "@logux/eslint-config/ts",
     "rules": {
+      "@typescript-eslint/restrict-plus-operands": "off",
       "security/detect-non-literal-regexp": "off",
       "jest/no-conditional-expect": "off",
       "no-extra-boolean-cast": "off"
@@ -104,11 +105,11 @@
     {
       "name": "Minimum",
       "import": "{ red }",
-      "limit": "10 B"
+      "limit": "13 B"
     },
     {
       "name": "All",
-      "limit": "421 B"
+      "limit": "425 B"
     }
   ],
   "simple-git-hooks": {
@@ -152,7 +153,8 @@
       "js",
       "Unprefix",
       "jorgebucaran",
-      "lukeed"
+      "lukeed",
+      "Deno"
     ]
   },
   "sharec": {

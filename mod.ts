@@ -1,43 +1,62 @@
-let tty = require('tty')
+type Color = (text: string | number) => string;
 
-let isDisabled = 'NO_COLOR' in process.env
-let isForced = 'FORCE_COLOR' in process.env
-let isWindows = process.platform === 'win32'
+export interface Colors {
+  isColorSupported: boolean;
+  reset: Color;
+  bold: Color;
+  dim: Color;
+  italic: Color;
+  underline: Color;
+  inverse: Color;
+  hidden: Color;
+  strikethrough: Color;
+  black: Color;
+  red: Color;
+  green: Color;
+  yellow: Color;
+  blue: Color;
+  magenta: Color;
+  cyan: Color;
+  white: Color;
+  gray: Color;
+  bgBlack: Color;
+  bgRed: Color;
+  bgGreen: Color;
+  bgYellow: Color;
+  bgBlue: Color;
+  bgMagenta: Color;
+  bgCyan: Color;
+  bgWhite: Color;
+}
 
-let isCompatibleTerminal =
-  tty && tty.isatty(1) && process.env.TERM && process.env.TERM !== 'dumb'
+export let isColorSupported = !Deno.noColor;
 
-let isCI =
-  'CI' in process.env &&
-  ('GITHUB_ACTIONS' in process.env ||
-    'GITLAB_CI' in process.env ||
-    'CIRCLECI' in process.env)
+let nope: Color = (s) => String(s);
 
-let isColorSupported =
-  !isDisabled && (isForced || isWindows || isCompatibleTerminal || isCI)
+function hasClosed(s: string | number, close: string): s is string {
+  return !!~("" + s).indexOf(close, 4);
+}
 
-let nope = s => String(s)
+function color(openCode: number, closeCode: number): Color {
+  let open = `\x1b[${openCode}m`;
+  let close = `\x1b[${closeCode}m`;
 
-function color(openCode, closeCode) {
-  let open = `\x1b[${openCode}m`
-  let close = `\x1b[${closeCode}m`
-
-  return s => {
-    if (s === '') {
-      return s
+  return (s) => {
+    if (s === "") {
+      return s;
     } else {
       return (
         open +
-        (!!~('' + s).indexOf(close, 4)
-          ? s.replace(new RegExp(`\\x1b\\[${closeCode}m`, 'g'), open)
+        (hasClosed(s, close)
+          ? s.replace(new RegExp(`\\x1b\\[${closeCode}m`, "g"), open)
           : s) +
         close
-      )
+      );
     }
-  }
+  };
 }
 
-function createColors(enabled = isColorSupported) {
+export function createColors(enabled = isColorSupported): Colors {
   if (enabled) {
     return {
       isColorSupported: true,
@@ -71,8 +90,8 @@ function createColors(enabled = isColorSupported) {
       bgBlue: color(44, 49),
       bgMagenta: color(45, 49),
       bgCyan: color(46, 49),
-      bgWhite: color(47, 49)
-    }
+      bgWhite: color(47, 49),
+    };
   } else {
     return {
       isColorSupported: false,
@@ -104,41 +123,12 @@ function createColors(enabled = isColorSupported) {
       bgBlue: nope,
       bgMagenta: nope,
       bgCyan: nope,
-      bgWhite: nope
-    }
+      bgWhite: nope,
+    };
   }
 }
 
-let {
-  reset,
-  bold,
-  dim,
-  italic,
-  underline,
-  inverse,
-  hidden,
-  strikethrough,
-  black,
-  red,
-  green,
-  yellow,
-  blue,
-  magenta,
-  cyan,
-  white,
-  gray,
-  bgBlack,
-  bgRed,
-  bgGreen,
-  bgYellow,
-  bgBlue,
-  bgMagenta,
-  bgCyan,
-  bgWhite
-} = createColors(isColorSupported)
-
-module.exports = {
-  isColorSupported,
+export let {
   reset,
   bold,
   dim,
@@ -164,5 +154,4 @@ module.exports = {
   bgMagenta,
   bgCyan,
   bgWhite,
-  createColors
-}
+} = createColors(isColorSupported);

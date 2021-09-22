@@ -1,4 +1,4 @@
-let nope = s => s
+let nope = s => String(s)
 
 let isColorSupported = false
 
