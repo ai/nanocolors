@@ -1,6 +1,6 @@
 # Nano Colors
 
-<img align="right" width="64" height="60"
+<img align="right" width="128" height="120"
      src="./img/logo.svg"
      title="Nano Colors logo by Roman Shamin">
 
