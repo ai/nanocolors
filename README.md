@@ -1,5 +1,9 @@
 # Nano Colors
 
+<img align="right" width="64" height="60"
+     src="./img/logo.svg"
+     title="Nano Colors logo by Roman Shamin">
+
 A tiny and fast Node.js library for formatting terminal text with ANSI colors.
 
 * It is **2 times faster** than `chalk`. Both loading and calls.
