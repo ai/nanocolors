@@ -55,7 +55,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Run simple tests
-        run: ./test/simple.js
+        run: ./test/simple.cjs
   deno:
     runs-on: ubuntu-latest
     name: Deno
