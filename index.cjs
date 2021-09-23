@@ -1,4 +1,4 @@
-import tty from 'tty'
+let tty = require('tty')
 
 let isDisabled = 'NO_COLOR' in process.env
 let isForced = 'FORCE_COLOR' in process.env
@@ -13,7 +13,7 @@ let isCI =
     'GITLAB_CI' in process.env ||
     'CIRCLECI' in process.env)
 
-export let isColorSupported =
+let isColorSupported =
   !isDisabled && (isForced || isWindows || isCompatibleTerminal || isCI)
 
 let nope = s => String(s)
@@ -37,7 +37,7 @@ let close49 = '\x1b[49m'
 let regexp39 = /\x1b\[39m/g
 let regexp49 = /\x1b\[49m/g
 
-export function createColors(enabled = isColorSupported) {
+function createColors(enabled = isColorSupported) {
   if (enabled) {
     return {
       isColorSupported: true,
@@ -99,7 +99,7 @@ export function createColors(enabled = isColorSupported) {
   }
 }
 
-export let {
+let {
   reset,
   bold,
   dim,
@@ -126,3 +126,33 @@ export let {
   bgCyan,
   bgWhite
 } = createColors(isColorSupported)
+
+module.exports = {
+  isColorSupported,
+  reset,
+  bold,
+  dim,
+  italic,
+  underline,
+  inverse,
+  hidden,
+  strikethrough,
+  black,
+  red,
+  green,
+  yellow,
+  blue,
+  magenta,
+  cyan,
+  white,
+  gray,
+  bgBlack,
+  bgRed,
+  bgGreen,
+  bgYellow,
+  bgBlue,
+  bgMagenta,
+  bgCyan,
+  bgWhite,
+  createColors
+}

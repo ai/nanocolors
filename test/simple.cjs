@@ -2,7 +2,7 @@
 
 let assets = require('assert')
 
-let { createColors } = require('../')
+let { createColors } = require('../index.cjs')
 
 let { red, isColorSupported } = createColors(true)
 

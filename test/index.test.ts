@@ -1,4 +1,4 @@
-import * as main from '../index.js'
+import * as main from '../index'
 
 it('prints colors', () => {
   let colors = main.createColors(true)

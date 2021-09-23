@@ -1,33 +1,33 @@
 let nope = s => String(s)
 
-let isColorSupported = false
-let reset = nope
-let bold = nope
-let dim = nope
-let italic = nope
-let underline = nope
-let inverse = nope
-let hidden = nope
-let strikethrough = nope
-let black = nope
-let red = nope
-let green = nope
-let yellow = nope
-let blue = nope
-let magenta = nope
-let cyan = nope
-let white = nope
-let gray = nope
-let bgBlack = nope
-let bgRed = nope
-let bgGreen = nope
-let bgYellow = nope
-let bgBlue = nope
-let bgMagenta = nope
-let bgCyan = nope
-let bgWhite = nope
+export let isColorSupported = false
+export let reset = nope
+export let bold = nope
+export let dim = nope
+export let italic = nope
+export let underline = nope
+export let inverse = nope
+export let hidden = nope
+export let strikethrough = nope
+export let black = nope
+export let red = nope
+export let green = nope
+export let yellow = nope
+export let blue = nope
+export let magenta = nope
+export let cyan = nope
+export let white = nope
+export let gray = nope
+export let bgBlack = nope
+export let bgRed = nope
+export let bgGreen = nope
+export let bgYellow = nope
+export let bgBlue = nope
+export let bgMagenta = nope
+export let bgCyan = nope
+export let bgWhite = nope
 
-function createColors() {
+export function createColors() {
   return {
     isColorSupported,
     reset,
@@ -56,34 +56,4 @@ function createColors() {
     bgCyan,
     bgWhite
   }
-}
-
-module.exports = {
-  isColorSupported,
-  reset,
-  bold,
-  dim,
-  italic,
-  underline,
-  inverse,
-  hidden,
-  strikethrough,
-  black,
-  red,
-  green,
-  yellow,
-  blue,
-  magenta,
-  cyan,
-  white,
-  gray,
-  bgBlack,
-  bgRed,
-  bgGreen,
-  bgYellow,
-  bgBlue,
-  bgMagenta,
-  bgCyan,
-  bgWhite,
-  createColors
 }

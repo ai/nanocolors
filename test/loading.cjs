@@ -34,5 +34,5 @@ let colorette = require('colorette')
 showTime('colorette')
 
 before = performance.now()
-let nanocolors = require('../index')
+let nanocolors = require('../index.cjs')
 showTime('nanocolors')

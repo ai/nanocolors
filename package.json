@@ -15,21 +15,36 @@
   "license": "MIT",
   "repository": "ai/nanocolors",
   "sideEffects": false,
+  "type": "module",
   "engines": {
     "node": ">=6.0.0"
   },
   "types": "./index.d.ts",
   "browser": {
-    "./index.js": "./index.browser.js"
+    "./index.js": "./index.browser.js",
+    "./index.cjs": "./index.browser.cjs"
+  },
+  "main": "index.cjs",
+  "module": "index.js",
+  "react-native": "index.js",
+  "exports": {
+    ".": {
+      "browser": "./index.browser.js",
+      "require": "./index.cjs",
+      "import": "./index.js",
+      "default": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./package.json": "./package.json",
+    "./index.d.ts": "./index.d.ts"
   },
   "scripts": {
-    "test": "jest --coverage && eslint . && size-limit && yaspeller *.md && print-snapshots"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --coverage && eslint . && size-limit && yaspeller *.md && print-snapshots"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@logux/eslint-config": "^45.4.7",
     "@logux/sharec-config": "^0.11.0",
-    "@size-limit/dual-publish": "^5.0.4",
     "@size-limit/preset-small-lib": "^5.0.4",
     "@types/jest": "^27.0.1",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
@@ -40,7 +55,6 @@
     "clean-publish": "^2.2.0",
     "cli-color": "^2.0.0",
     "colorette": "^2.0.7",
-    "dual-publish": "^1.0.9",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.2",
@@ -77,7 +91,7 @@
     }
   },
   "eslintConfig": {
-    "extends": "@logux/eslint-config/ts",
+    "extends": "@logux/eslint-config/esm",
     "rules": {
       "@typescript-eslint/restrict-plus-operands": "off",
       "jest/no-conditional-expect": "off",
@@ -94,7 +108,13 @@
         }
       },
       {
-        "files": "test/loading.js",
+        "files": "test/*.test.ts",
+        "rules": {
+          "import/extensions": "off"
+        }
+      },
+      {
+        "files": "test/loading.cjs",
         "rules": {
           "import/newline-after-import": "off",
           "import/order": "off",
@@ -107,10 +127,12 @@
     {
       "name": "Minimum",
       "import": "{ red }",
+      "path": "./index.js",
       "limit": "13 B"
     },
     {
       "name": "All",
+      "path": "./index.js",
       "limit": "424 B"
     }
   ],
@@ -127,11 +149,7 @@
   },
   "lint-staged": {
     "*.md": "yaspeller",
-    "*.js": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.ts": [
+    "*.{js,mjs,ts}": [
       "prettier --write",
       "eslint --fix"
     ]

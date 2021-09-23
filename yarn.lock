@@ -586,11 +586,6 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@size-limit/dual-publish@^5.0.4":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@size-limit/dual-publish/-/dual-publish-5.0.4.tgz#b541fd4ae0f45d33ca65c5dadce48204126cea2d"
-  integrity sha512-cwfVpv3239FHbp4VWxkgLQe8LM1Ecq6KZ885rv0cUTO5cyeN6wXH0N+dVWMl4ZNA4esDSNxV8PdX0Ghw5y3RUQ==
-
 "@size-limit/file@5.0.4":
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-5.0.4.tgz#d3bb30214218376db12c6fbc93498bcde1a65939"
@@ -2315,17 +2310,6 @@ domutils@^2.6.0:
     domelementtype "^2.2.0"
     domhandler "^4.2.0"
 
-dual-publish@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/dual-publish/-/dual-publish-1.0.9.tgz#5e26128254f9702348e7ac003dc1a7712c326bb9"
-  integrity sha512-iyn+FUQwRWTA+/pvi6EXwk5uJUo6PL4hqwC2epgrPF6n4TlNKuaGMkciB9gG++lc/pvq9v5o7y2DqkXGivLePQ==
-  dependencies:
-    clean-publish "^2.2.0"
-    globby "^11.0.2"
-    line-column "^1.0.2"
-    nanocolors "^0.1.0"
-    rimraf "^3.0.2"
-
 duplexer@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.2.tgz#3abe43aef3835f8ae077d136ddce0f276b0400e6"
@@ -3187,7 +3171,7 @@ globals@^13.11.0, globals@^13.6.0, globals@^13.9.0:
   dependencies:
     type-fest "^0.20.2"
 
-globby@^11.0.2, globby@^11.0.3, globby@^11.0.4:
+globby@^11.0.3, globby@^11.0.4:
   version "11.0.4"
   resolved "https://registry.yarnpkg.com/globby/-/globby-11.0.4.tgz#2cbaff77c2f2a62e71e9b2813a67b97a3a3001a5"
   integrity sha512-9O4MVG9ioZJ08ffbcyVYyLOJLk5JQ688pJ4eMGLpdWLHq/Wr1D9BlriLQyL0E+jbkuePVZXYFj47QM/v093wHg==
@@ -4377,14 +4361,6 @@ lilconfig@^2.0.2, lilconfig@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.0.3.tgz#68f3005e921dafbd2a2afb48379986aa6d2579fd"
   integrity sha512-EHKqr/+ZvdKCifpNrJCKxBTgk5XupZA3y/aCPY9mxfgBzmgh93Mt/WqjjQ38oMxXuvDokaKiM3lAgvSH2sjtHg==
-
-line-column@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/line-column/-/line-column-1.0.2.tgz#d25af2936b6f4849172b312e4792d1d987bc34a2"
-  integrity sha1-0lryk2tvSEkXKzEuR5LR2Ye8NKI=
-  dependencies:
-    isarray "^1.0.0"
-    isobject "^2.0.0"
 
 lines-and-columns@^1.1.6:
   version "1.1.6"
