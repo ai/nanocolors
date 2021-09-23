@@ -1,43 +1,45 @@
 #!/usr/bin/env node
 
-import { mkdirSync, rmSync, writeFileSync } from 'fs'
-import { fileURLToPath } from 'url'
-import { execSync } from 'child_process'
-import { join } from 'path'
+import { get } from 'https'
 
 import { bold, gray } from '../index.js'
 
-function getSize(lib) {
-  let testDir = join(fileURLToPath(import.meta.url), '..', 'size-test')
-  mkdirSync(testDir)
-  writeFileSync(join(testDir, 'package.json'), '{"private":true}')
-  let install = execSync(`yarn add ${lib}@latest`, { cwd: testDir }).toString()
-  let version = install.match(new RegExp(lib + '@(\\d+\\.\\d+\\.\\d+)'))[1]
-  let out = execSync(`du -sh node_modules/`, { cwd: testDir }).toString()
-  rmSync(testDir, { recursive: true, force: true })
-  let size
-  if (out.includes('M')) {
-    size = String(parseFloat(out.match(/^(\d+(,\d+)?)M/)[1]) * 1024)
-  } else {
-    size = out.match(/^(\d+)K/)[1]
-  }
-  return [size, version]
+async function getJSON(url) {
+  return new Promise(resolve => {
+    get(url, res => {
+      let text = ''
+      res.on('data', chunk => {
+        text += chunk
+      })
+      res.on('end', () => {
+        resolve(JSON.parse(text))
+      })
+    })
+  })
 }
 
-function benchmark(lib) {
-  let [size, version] = getSize(lib)
+async function benchmark(lib) {
+  let data = await getJSON(`https://packagephobia.com/v2/api.json?p=${lib}`)
+  let size = data.install.bytes
   process.stdout.write(
     lib.padEnd('ansi-colors  '.length) +
-      bold(size.padStart(4)) +
-      ' KB ' +
-      gray(version) +
-      '\n'
+      bold(
+        Math.round(size / 1024)
+          .toString()
+          .padStart(4)
+      ) +
+      ' kB\n'
   )
 }
 
-benchmark('chalk')
-benchmark('cli-color')
-benchmark('ansi-colors')
-benchmark('kleur')
-benchmark('colorette')
-benchmark('nanocolors')
+async function start() {
+  process.stdout.write(gray('Data from packagephobia.com\n'))
+  await benchmark('chalk')
+  await benchmark('cli-color')
+  await benchmark('ansi-colors')
+  await benchmark('kleur')
+  await benchmark('colorette')
+  await benchmark('nanocolors')
+}
+
+start()
