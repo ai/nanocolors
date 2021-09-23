@@ -16,9 +16,6 @@
   "repository": "ai/nanocolors",
   "sideEffects": false,
   "type": "module",
-  "engines": {
-    "node": ">=6.0.0"
-  },
   "types": "./index.d.ts",
   "browser": {
     "./index.js": "./index.browser.js",
@@ -26,17 +23,14 @@
   },
   "main": "index.cjs",
   "module": "index.js",
-  "react-native": "index.js",
   "exports": {
     ".": {
       "browser": "./index.browser.js",
       "require": "./index.cjs",
       "import": "./index.js",
-      "default": "./index.js",
-      "types": "./index.d.ts"
+      "default": "./index.js"
     },
-    "./package.json": "./package.json",
-    "./index.d.ts": "./index.d.ts"
+    "./package.json": "./package.json"
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest --coverage && eslint . && size-limit && yaspeller *.md && print-snapshots"
