@@ -2,7 +2,7 @@ let nope = s => String(s)
 
 function createColors() {
   return {
-    isColorSupported,
+    isColorSupported: false,
     reset: nope,
     bold: nope,
     dim: nope,
