@@ -1,8 +1,5 @@
-delete process.env.CI
-process.env.FORCE_COLOR = '1'
-process.env.NO_COLOR = '1'
-
-let { red, createColors, isColorSupported } = require('../index')
+import './disabled.js'
+import { red, createColors, isColorSupported } from '../../index.js'
 
 it('disabled colors on request', () => {
   expect(isColorSupported).toBe(false)

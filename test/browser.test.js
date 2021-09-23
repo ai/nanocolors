@@ -1,5 +1,5 @@
-let browser = require('../index.browser')
-let main = require('../index')
+import * as browser from '../index.browser.js'
+import * as main from '../index.js'
 
 it('does nothing', () => {
   let colors = browser.createColors(true)
@@ -18,8 +18,10 @@ it('does nothing', () => {
 
 it('copies all methods', () => {
   let created = Object.keys(browser.createColors(true))
-  expect(Object.keys(browser)).toEqual(created.concat(['createColors']))
-  expect(Object.keys(browser)).toEqual(Object.keys(main))
+  expect(Object.keys(browser).sort()).toEqual(
+    created.concat(['createColors']).sort()
+  )
+  expect(Object.keys(browser).sort()).toEqual(Object.keys(main).sort())
 })
 
 it('converts number to string', () => {

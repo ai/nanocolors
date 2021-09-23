@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 
-let { mkdirSync, rmSync, writeFileSync } = require('fs')
-let { execSync } = require('child_process')
-let { join } = require('path')
+import { mkdirSync, rmSync, writeFileSync } from 'fs'
+import { fileURLToPath } from 'url'
+import { execSync } from 'child_process'
+import { join } from 'path'
 
-let { bold } = require('..')
+import { bold } from '../index.js'
 
 function getSize(lib) {
-  let testDir = join(__dirname, 'size-test')
+  let testDir = join(fileURLToPath(import.meta.url), '..', 'size-test')
   mkdirSync(testDir)
   writeFileSync(join(testDir, 'package.json'), '{"private":true}')
   execSync(`yarn add ${lib}`, { cwd: testDir })

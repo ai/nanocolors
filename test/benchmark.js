@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
-let benchmark = require('benchmark')
-let colorette = require('colorette')
-let kleur = require('kleur')
-let kleurColors = require('kleur/colors')
-let chalk = require('chalk')
-let ansi = require('ansi-colors')
-let cliColor = require('cli-color')
+import benchmark from 'benchmark'
+import * as colorette from 'colorette'
+import kleur from 'kleur'
+import * as kleurColors from 'kleur/colors'
+import chalk from 'chalk'
+import ansi from 'ansi-colors'
+import cliColor from 'cli-color'
 
-let nanocolors = require('../')
+import * as nanocolors from '../index.js'
 
 function formatNumber(number) {
   return String(number)

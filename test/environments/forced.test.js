@@ -1,8 +1,5 @@
-delete process.env.CI
-process.env.TERM = 'dumb'
-process.env.FORCE_COLOR = '1'
-
-let { red, createColors, isColorSupported } = require('../index')
+import './forced.js'
+import { red, createColors, isColorSupported } from '../../index.js'
 
 it('enables colors on request even without term', () => {
   expect(isColorSupported).toBe(true)

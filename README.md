@@ -38,8 +38,8 @@ copied from [**@lukeed**](https://github.com/lukeed/)’s
        alt="Sponsored by Evil Martians" width="236" height="54">
 </a>
 
-[ESM]: https://unpkg.com/nanocolors/index.js
-[CJS]: https://unpkg.com/nanocolors/index.cjs
+[ESM]: https://github.com/ai/nanocolors/blob/main/index.js
+[CJS]: https://github.com/ai/nanocolors/blob/main/index.cjs
 
 
 ## Benchmarks
