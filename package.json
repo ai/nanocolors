@@ -16,7 +16,7 @@
   "repository": "ai/nanocolors",
   "sideEffects": false,
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=6.0.0"
   },
   "types": "./index.d.ts",
   "browser": {
