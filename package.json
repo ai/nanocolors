@@ -104,6 +104,7 @@
         "rules": {
           "node/no-unsupported-features/es-builtins": "off",
           "node/no-unsupported-features/es-syntax": "off",
+          "security/detect-non-literal-regexp": "off",
           "security/detect-unsafe-regex": "off"
         }
       },
