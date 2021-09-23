@@ -1,6 +1,6 @@
 {
   "name": "nanocolors",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "2x times faster than chalk and use 5x less space in node_modules",
   "keywords": [
     "color",
