@@ -74,12 +74,13 @@ The space in `node_modules` including sub-dependencies:
 
 ```
 $ ./test/size.js
-chalk         192 KB
-cli-color    5120 KB
-ansi-colors    40 KB
-kleur          44 KB
-colorette      32 KB
-nanocolors     36 KB
+Data from packagephobia.com
+chalk         101 kB
+cli-color    1249 kB
+ansi-colors    25 kB
+kleur          21 kB
+colorette      16 kB
+nanocolors     16 kB
 ```
 
 Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.8.
