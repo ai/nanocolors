@@ -86,17 +86,19 @@
     },
     "overrides": [
       {
+        "files": "test/**",
+        "rules": {
+          "node/no-unsupported-features/es-builtins": "off",
+          "node/no-unsupported-features/es-syntax": "off",
+          "security/detect-unsafe-regex": "off"
+        }
+      },
+      {
         "files": "test/loading.js",
         "rules": {
           "import/newline-after-import": "off",
           "import/order": "off",
           "no-unused-vars": "off"
-        }
-      },
-      {
-        "files": "test/size.js",
-        "rules": {
-          "security/detect-unsafe-regex": "off"
         }
       }
     ]
