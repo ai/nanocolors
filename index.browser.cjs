@@ -58,32 +58,5 @@ function createColors() {
   }
 }
 
-module.exports = {
-  isColorSupported,
-  reset,
-  bold,
-  dim,
-  italic,
-  underline,
-  inverse,
-  hidden,
-  strikethrough,
-  black,
-  red,
-  green,
-  yellow,
-  blue,
-  magenta,
-  cyan,
-  white,
-  gray,
-  bgBlack,
-  bgRed,
-  bgGreen,
-  bgYellow,
-  bgBlue,
-  bgMagenta,
-  bgCyan,
-  bgWhite,
-  createColors
-}
+module.exports = createColors(isColorSupported)
+module.exports.createColors = createColors
