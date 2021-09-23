@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.1.8
+* Fixed `Color` type export.
+
 ## 0.1.7
 * Reduced package size.
 * Improved performance for edge cases.
