@@ -1,6 +1,12 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.1.7
+* Reduced package size.
+* Improved performance for edge cases.
+* Added Node.js 6 support.
+* Added logo (by Roman Shamin).
+
 ## 0.1.6
 * Add odd Node.js versions support.
 
