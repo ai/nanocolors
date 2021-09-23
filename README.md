@@ -20,7 +20,7 @@ console.log(
 ```
 
 <p align="center">
-  <img src="./example.png" alt="Nano Colors output" width="600">
+  <img src="./img/example.png" alt="Nano Colors output" width="600">
 </p>
 
 API was heavily inspired

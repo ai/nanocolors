@@ -6,6 +6,6 @@ test/
 tsconfig.json
 coverage/
 
-*.png
+img/
 mod.ts
 .prettierignore
