@@ -1,4 +1,4 @@
-type Color = (text: string | number) => string
+export type Color = (text: string | number) => string
 
 export interface Colors {
   isColorSupported: boolean
