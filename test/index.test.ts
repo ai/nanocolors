@@ -1,4 +1,30 @@
 import * as main from '../index'
+import * as colorette from 'colorette'
+import kleur from 'kleur'
+import * as kleurColors from 'kleur/colors'
+import chalk from 'chalk'
+import ansiColors from 'ansi-colors'
+import cliColor from 'cli-color'
+
+it('matches chalk', () => {
+  expect(main.yellow('specific text')).toBe(chalk.yellow('specific text'));
+})
+
+it('matches cliColor', () => {
+  expect(main.yellow('specific text')).toBe(cliColor.yellow('specific text'))
+})
+
+it('matches ansiColors', () => {
+  expect(main.yellow('specific text')).toBe(ansiColors.yellow('specific text'))
+})
+
+it('matches kleur', () => {
+  expect(main.yellow('specific text')).toBe(kleur.yellow('specific text'))
+})
+
+it('matches colorette', () => {
+  expect(main.yellow('specific text')).toBe(colorette.yellow('specific text'))
+})
 
 it('prints colors', () => {
   let colors = main.createColors(true)
