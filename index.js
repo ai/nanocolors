@@ -126,3 +126,99 @@ export let {
   bgCyan,
   bgWhite
 } = createColors(isColorSupported)
+
+
+const colors = {
+  red: {
+    start: '\x1b[31m',
+    end: close39
+  }
+}
+/**
+ *
+ * @param {string[]} strings
+ * @param  {...string} args
+ * @example
+ * color
+ * colorize`{red this} is red color text`
+ * const text = 'text'
+ * colorize`{red ${text}} is red color text`
+ */
+export function colorize(strings, ...args) {
+  const openTag = '{';
+  const closeTag = '}';
+  const space = ' ';
+
+  const colorStack = [];
+  const wrapperStack = [];
+
+  const result = ''
+
+  const templateArgs = []
+  for (let i = 0; i < strings.length; i++) {
+    let str = strings[i];
+    if (str) {
+      const startIndex = str.indexOf(openTag);
+      const endIndex = str.indexOf(closeTag);
+
+      if (startIndex === -1 && endIndex === -1) {
+        console.log(str)
+        templateArgs.push(str);
+      } else {
+        if (startIndex !== -1) {
+          const preStr = str.substring(0, startIndex);
+          if (preStr) {
+            templateArgs.push(preStr);
+          }
+          const spaceIndex = str.indexOf(space, startIndex);
+          const mark = str.substring(startIndex + 1, spaceIndex);
+          str = str.substring(spaceIndex + 1);
+
+          wrapperStack.push(templateArgs.length);
+          colorStack.push(mark);
+          console.log(str, colorStack)
+
+          const endIndex = str.indexOf(closeTag);
+          if (endIndex !== -1) {
+            console.log(str, endIndex)
+            const midStr = str.substring(0, endIndex);
+            templateArgs.push(midStr)
+            mergeColor(colorStack, wrapperStack, templateArgs)
+            const endStr = str.substring(midStr.length + 1);
+            templateArgs.push(endStr)
+          } else {
+            str = str.substring(startIndex + 1);
+            templateArgs.push(str)
+          }
+        }
+        if (startIndex === -1 && endIndex !== -1) {
+          mergeColor(colorStack, wrapperStack, templateArgs)
+          const endStr = str.substring(endIndex + 1);
+          templateArgs.push(endStr)
+        }
+      }
+    }
+    if (args[i]) {
+      templateArgs.push(args[i])
+    }
+  }
+
+  console.log(templateArgs.join(''))
+}
+
+
+function mergeColor(colorStack, wrapperStack, templateArgs) {
+  if (colorStack.length && wrapperStack.length) {
+    let length = templateArgs.length - wrapperStack.pop()
+    const color = colorStack.pop()
+    let result = colors[color] ? colors[color].start : `{${color} `
+    while (length > 0) {
+      const currentStr = templateArgs.pop()
+      result += currentStr
+      length--
+    }
+    result += colors[color] ? colors[color].end : '}'
+    templateArgs.push(result)
+  }
+}
+
