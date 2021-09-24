@@ -56,17 +56,3 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Run simple tests
         run: ./test/simple.cjs
-  deno:
-    runs-on: ubuntu-latest
-    name: Deno
-    steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v2
-      - name: Install Deno
-        uses: denolib/setup-deno@v2
-        with:
-          deno-version: 1.14.1
-      - name: Lint
-        run: deno fmt --check mod.ts test/deno.ts
-      - name: Test
-        run: deno test test/deno.ts
