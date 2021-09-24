@@ -152,8 +152,6 @@ export function colorize(strings, ...args) {
   const colorStack = [];
   const wrapperStack = [];
 
-  const result = ''
-
   const templateArgs = []
   for (let i = 0; i < strings.length; i++) {
     let str = strings[i];
@@ -162,7 +160,6 @@ export function colorize(strings, ...args) {
       const endIndex = str.indexOf(closeTag);
 
       if (startIndex === -1 && endIndex === -1) {
-        console.log(str)
         templateArgs.push(str);
       } else {
         if (startIndex !== -1) {
@@ -176,11 +173,9 @@ export function colorize(strings, ...args) {
 
           wrapperStack.push(templateArgs.length);
           colorStack.push(mark);
-          console.log(str, colorStack)
 
           const endIndex = str.indexOf(closeTag);
           if (endIndex !== -1) {
-            console.log(str, endIndex)
             const midStr = str.substring(0, endIndex);
             templateArgs.push(midStr)
             mergeColor(colorStack, wrapperStack, templateArgs)
@@ -221,4 +216,3 @@ function mergeColor(colorStack, wrapperStack, templateArgs) {
     templateArgs.push(result)
   }
 }
-
