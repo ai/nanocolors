@@ -1,7 +1,8 @@
 let tty = require('tty')
 
-let isDisabled = 'NO_COLOR' in process.env
-let isForced = 'FORCE_COLOR' in process.env
+let isDisabled =
+  'NO_COLOR' in process.env || process.argv.includes('--no-color')
+let isForced = 'FORCE_COLOR' in process.env || process.argv.includes('--color')
 let isWindows = process.platform === 'win32'
 
 let isCompatibleTerminal =
