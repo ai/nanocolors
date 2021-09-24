@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.2.1
+* Fixed `--no-color` and `--color` support in CJS version.
+
 ## 0.2
 * Added `--no-color` and `--color` arguments support.
 * Removed Deno support.
