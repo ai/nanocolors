@@ -1,6 +1,10 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.2
+* Added `--no-color` and `--color` arguments support.
+* Removed Deno support.
+
 ## 0.1.12
 * Reduced package size.
 
