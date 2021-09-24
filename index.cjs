@@ -100,5 +100,59 @@ function createColors(enabled = isColorSupported) {
   }
 }
 
-module.exports = createColors(isColorSupported)
-module.exports.createColors = createColors
+let {
+  reset,
+  bold,
+  dim,
+  italic,
+  underline,
+  inverse,
+  hidden,
+  strikethrough,
+  black,
+  red,
+  green,
+  yellow,
+  blue,
+  magenta,
+  cyan,
+  white,
+  gray,
+  bgBlack,
+  bgRed,
+  bgGreen,
+  bgYellow,
+  bgBlue,
+  bgMagenta,
+  bgCyan,
+  bgWhite
+} = createColors(isColorSupported)
+
+module.exports = {
+  createColors,
+  reset,
+  bold,
+  dim,
+  italic,
+  underline,
+  inverse,
+  hidden,
+  strikethrough,
+  black,
+  red,
+  green,
+  yellow,
+  blue,
+  magenta,
+  cyan,
+  white,
+  gray,
+  bgBlack,
+  bgRed,
+  bgGreen,
+  bgYellow,
+  bgBlue,
+  bgMagenta,
+  bgCyan,
+  bgWhite
+}
