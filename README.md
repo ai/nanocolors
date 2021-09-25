@@ -11,6 +11,8 @@ A tiny and fast Node.js library for formatting terminal text with ANSI colors.
 > [`colorette`](https://github.com/jorgebucaran/colorette) with few cool hacks
 > copied from [**@lukeed**](https://github.com/lukeed/)’s
 > [`kleur`](https://github.com/lukeed/kleur).
+> See the [changes](https://github.com/ai/nanocolors/wiki/Colorette-Changes)
+> between Nano Colors and `colorette`.
 
 * It is **2 times faster** than `chalk`. Both loading and calls.
 * **No dependencies.** It takes **5 times less space** in `node_modules`
