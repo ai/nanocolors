@@ -56,7 +56,7 @@ ansi-colors    3,601,857 ops/sec
 kleur         15,185,239 ops/sec
 kleur/colors  21,113,231 ops/sec
 colorette     19,712,884 ops/sec
-nanocolors    21,176,376 ops/sec
+nanocolors    47,256,069 ops/sec
 ```
 
 Library loading time:
