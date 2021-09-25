@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.2.5
+* Fixed non-string and non-number argument support.
+
 ## 0.2.4
 * Now 2 times faster.
 
