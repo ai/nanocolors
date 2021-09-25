@@ -6,6 +6,11 @@
 
 A tiny and fast Node.js library for formatting terminal text with ANSI colors.
 
+>Started as a fork
+of [**@jorgebucaran**](https://github.com/jorgebucaran/)’s wonderful [`colorette`](https://github.com/jorgebucaran/colorette) project ([check out his other work!](https://github.com/jorgebucaran)) with few cool hacks
+copied from [**@lukeed**](https://github.com/lukeed/)’s
+[`kleur`](https://github.com/lukeed/kleur).
+
 * It is **2 times faster** than `chalk`. Both loading and calls.
 * **No dependencies.** It takes **5 times less space** in `node_modules`
   than `chalk`.
@@ -26,12 +31,6 @@ console.log(
 <p align="center">
   <img src="./img/example.png" alt="Nano Colors output" width="600">
 </p>
-
-Started as a fork
-of [**@jorgebucaran**](https://github.com/jorgebucaran/)’s
-[`colorette`](https://github.com/jorgebucaran/colorette) with few cool hacks
-copied from [**@lukeed**](https://github.com/lukeed/)’s
-[`kleur`](https://github.com/lukeed/kleur).
 
 <a href="https://evilmartians.com/?utm_source=nanocolors">
   <img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg"
