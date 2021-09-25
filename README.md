@@ -8,8 +8,8 @@ A tiny and fast Node.js library for formatting terminal text with ANSI colors.
 
 >Started as a fork
 > of [**@jorgebucaran**](https://github.com/jorgebucaran/)’s
-> [`colorette`](https://github.com/jorgebucaran/colorette) with few hacks
-> copied from [**@lukeed**](https://github.com/lukeed/)’s
+> [`colorette`](https://github.com/jorgebucaran/colorette) with hacks
+> from [**@lukeed**](https://github.com/lukeed/)’s
 > [`kleur`](https://github.com/lukeed/kleur).
 > See [changes](https://github.com/ai/nanocolors/wiki/Colorette-Changes)
 > between Nano Colors and `colorette`.
