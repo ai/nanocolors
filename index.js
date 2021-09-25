@@ -21,12 +21,12 @@ let nope = s => String(s)
 
 function color(open, close, closeRegexp) {
   return s => {
-    if (s === '') {
-      return s
+    if (!s.length) {
+      return String(s)
     } else {
       return (
         open +
-        (!!~('' + s).indexOf(close, 4) ? s.replace(closeRegexp, open) : s) +
+        (!!~s.indexOf(close, 4) ? s.replace(closeRegexp, open) : s) +
         close
       )
     }
