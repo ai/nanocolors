@@ -129,6 +129,7 @@ let {
 } = createColors(isColorSupported)
 
 module.exports = {
+  isColorSupported,
   createColors,
   reset,
   bold,
