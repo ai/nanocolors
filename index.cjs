@@ -21,7 +21,7 @@ let nope = s => String(s)
 
 function color(open, close, closeRegexp) {
   return s => {
-    if (!s.length) {
+    if (!s || !s.length) {
       return String(s)
     } else {
       return (
