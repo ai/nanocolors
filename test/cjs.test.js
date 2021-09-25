@@ -1,4 +1,4 @@
-import main from '../index.cjs'
+import * as main from '../index.cjs'
 import * as esm from '../index.js'
 
 it('prints colors', () => {
@@ -42,6 +42,9 @@ it('disables colors', () => {
 it('copies all methods', () => {
   let created = Object.keys(main.createColors(true))
   expect(Object.keys(main).sort()).toEqual(
+    created.concat(['createColors', 'default']).sort()
+  )
+  expect(Object.keys(main.default).sort()).toEqual(
     created.concat(['createColors']).sort()
   )
 })

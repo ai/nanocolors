@@ -90,6 +90,7 @@
       "@typescript-eslint/restrict-plus-operands": "off",
       "jest/no-conditional-expect": "off",
       "no-extra-boolean-cast": "off",
+      "jest/lowercase-name": "off",
       "no-control-regex": "off"
     },
     "overrides": [
