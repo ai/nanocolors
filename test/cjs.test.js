@@ -54,7 +54,10 @@ it('does not add modifiers to empty string', () => {
   expect(green('')).toEqual('')
 })
 
-it('converts number to string on disabled colors', () => {
+it('converts non-string to string on disabled colors', () => {
   let noColors = main.createColors(false)
   expect(typeof noColors.red(1)).toEqual('string')
+  expect(noColors.red(1)).toEqual('1')
+  expect(noColors.red()).toEqual('undefined')
+  expect(noColors.red(null)).toEqual('null')
 })
