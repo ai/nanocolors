@@ -20,9 +20,13 @@ export let isColorSupported =
 let nope = s => String(s)
 
 function color(open, close, closeRegexp) {
-  return s => {
+  function func(s) {
     if (!s || !s.length) {
-      return String(s)
+      if (s === '') {
+        return ''
+      } else {
+        return func(String(s))
+      }
     } else {
       return (
         open +
@@ -31,6 +35,7 @@ function color(open, close, closeRegexp) {
       )
     }
   }
+  return func
 }
 
 let close39 = '\x1b[39m'
