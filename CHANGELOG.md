@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.2.3
+* Fixed CJS version.
+
 ## 0.2.2
 * Fixed Jest ESM support.
 
