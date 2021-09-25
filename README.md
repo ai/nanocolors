@@ -27,8 +27,8 @@ console.log(
   <img src="./img/example.png" alt="Nano Colors output" width="600">
 </p>
 
-API was heavily inspired
-by [**@jorgebucaran**](https://github.com/jorgebucaran/)’s
+Started as a fork
+of [**@jorgebucaran**](https://github.com/jorgebucaran/)’s
 [`colorette`](https://github.com/jorgebucaran/colorette) with few cool hacks
 copied from [**@lukeed**](https://github.com/lukeed/)’s
 [`kleur`](https://github.com/lukeed/kleur).
