@@ -44,13 +44,13 @@ it('converts non-string to string', () => {
   let { red } = main.createColors(true)
   expect(typeof red(1)).toEqual('string')
   expect(red(1)).toEqual(red('1'))
-  // @ts-ignore
+  // @ts-expect-error
   expect(red(new Date(0))).toEqual(red(String(new Date(0))))
-  // @ts-ignore
+  // @ts-expect-error
   expect(red()).toEqual(red('undefined'))
-  // @ts-ignore
+  // @ts-expect-error
   expect(red(undefined)).toEqual(red('undefined'))
-  // @ts-ignore
+  // @ts-expect-error
   expect(red(null)).toEqual(red('null'))
 })
 
@@ -58,10 +58,10 @@ it('converts non-string to string on disabled colors', () => {
   let { red } = main.createColors(false)
   expect(typeof red(1)).toEqual('string')
   expect(red(1)).toEqual('1')
-  // @ts-ignore
+  // @ts-expect-error
   expect(red()).toEqual('undefined')
-  // @ts-ignore
+  // @ts-expect-error
   expect(red()).toEqual('undefined')
-  // @ts-ignore
+  // @ts-expect-error
   expect(red(null)).toEqual('null')
 })
