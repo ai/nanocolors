@@ -7,5 +7,3 @@ tsconfig.json
 coverage/
 
 img/
-mod.ts
-.prettierignore
