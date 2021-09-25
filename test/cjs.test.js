@@ -54,10 +54,28 @@ it('does not add modifiers to empty string', () => {
   expect(green('')).toEqual('')
 })
 
+it('converts non-string to string', () => {
+  let { red } = main.createColors(true)
+  expect(typeof red(1)).toEqual('string')
+  expect(red(1)).toEqual(red('1'))
+  // @ts-ignore
+  expect(red(new Date(0))).toEqual(red(String(new Date(0))))
+  // @ts-ignore
+  expect(red()).toEqual(red('undefined'))
+  // @ts-ignore
+  expect(red(undefined)).toEqual(red('undefined'))
+  // @ts-ignore
+  expect(red(null)).toEqual(red('null'))
+})
+
 it('converts non-string to string on disabled colors', () => {
-  let noColors = main.createColors(false)
-  expect(typeof noColors.red(1)).toEqual('string')
-  expect(noColors.red(1)).toEqual('1')
-  expect(noColors.red()).toEqual('undefined')
-  expect(noColors.red(null)).toEqual('null')
+  let { red } = main.createColors(false)
+  expect(typeof red(1)).toEqual('string')
+  expect(red(1)).toEqual('1')
+  // @ts-ignore
+  expect(red()).toEqual('undefined')
+  // @ts-ignore
+  expect(red()).toEqual('undefined')
+  // @ts-ignore
+  expect(red(null)).toEqual('null')
 })
