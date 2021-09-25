@@ -14,7 +14,7 @@ A tiny and fast Node.js library for formatting terminal text with ANSI colors.
 > See [changes](https://github.com/ai/nanocolors/wiki/Colorette-Changes)
 > between Nano Colors and `colorette`.
 
-* It is **2 times faster** than `chalk`. Both loading and calls.
+* It is **4 times faster** than `chalk`. Both loading and calls.
 * **No dependencies.** It takes **5 times less space** in `node_modules`
   than `chalk`.
 * **Actively maintained.** Used in many big projects
