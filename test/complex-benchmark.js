@@ -18,35 +18,39 @@ function formatNumber(number) {
 }
 
 let suite = new benchmark.Suite()
-let out // eslint-disable-line no-unused-vars
+let out
 let index = 1e8
 
 suite
   .add('chalk', () => {
-    chalk.red(chalk.green('green') + ' red ' + chalk.bold(++index))
+    out = chalk.red(chalk.green('green') + ' red ' + chalk.bold(++index))
   })
   .add('cli-color', () => {
-    cliColor.red(cliColor.green('green') + ' red ' + cliColor.bold(++index))
+    out = cliColor.red(
+      cliColor.green('green') + ' red ' + cliColor.bold(++index)
+    )
   })
   .add('ansi-colors', () => {
-    ansi.red(ansi.green('green') + ' red ' + ansi.bold(++index))
+    out = ansi.red(ansi.green('green') + ' red ' + ansi.bold(++index))
   })
   .add('kleur', () => {
-    kleur.red(kleur.green('green') + ' red ' + kleur.bold(++index))
+    out = kleur.red(kleur.green('green') + ' red ' + kleur.bold(++index))
   })
   .add('kleur/colors', () => {
-    kleurColors.red(
+    out = kleurColors.red(
       kleurColors.green('green') + ' red ' + kleurColors.bold(++index)
     )
   })
   .add('colorette', () => {
-    colorette.red(colorette.green('green') + ' red ' + colorette.bold(++index))
+    out = colorette.red(
+      colorette.green('green') + ' red ' + colorette.bold(++index)
+    )
   })
   .add('felt-pen', () => {
-    pen.red(pen.green('green') + ' red ' + pen.bold(++index))
+    out = pen.red(pen.green('green') + ' red ' + pen.bold(++index))
   })
   .add('nanocolors', () => {
-    nanocolors.red(
+    out = nanocolors.red(
       nanocolors.green('green') + ' red ' + nanocolors.bold(++index)
     )
   })

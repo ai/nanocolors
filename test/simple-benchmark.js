@@ -18,8 +18,7 @@ function formatNumber(number) {
 }
 
 let suite = new benchmark.Suite()
-
-let out // eslint-disable-line no-unused-vars
+let out
 
 suite
   .add('chalk', () => {
