@@ -38,8 +38,10 @@ function color(open, close, closeRegexp, restore = open) {
   return func
 }
 
+let close22 = '\x1b[22m'
 let close39 = '\x1b[39m'
 let close49 = '\x1b[49m'
+let regexp22 = /\x1b\[22m/g
 let regexp39 = /\x1b\[39m/g
 let regexp49 = /\x1b\[49m/g
 
@@ -48,8 +50,8 @@ function createColors(enabled = isColorSupported) {
     return {
       isColorSupported: true,
       reset: s => `\x1b[0m${s}\x1b[0m`,
-      bold: color('\x1b[1m', '\x1b[22m', /\x1b\[22m/g, '\x1b[22m\x1b[1m'),
-      dim: color('\x1b[2m', '\x1b[22m', /\x1b\[22m/g, '\x1b[22m\x1b[2m'),
+      bold: color('\x1b[1m', close22, regexp22, '\x1b[22m\x1b[1m'),
+      dim: color('\x1b[2m', close22, regexp22, '\x1b[22m\x1b[2m'),
       italic: color('\x1b[3m', '\x1b[23m', /\x1b\[23m/g),
       underline: color('\x1b[4m', '\x1b[24m', /\x1b\[24m/g),
       inverse: color('\x1b[7m', '\x1b[27m', /\x1b\[27m/g),
