@@ -20,37 +20,35 @@ function formatNumber(number) {
 let suite = new benchmark.Suite()
 
 let out // eslint-disable-line no-unused-vars
-let index = 1e8
 
 suite
   .add('chalk', () => {
-    out = chalk.red(chalk.bold('bold' + ++index) + ' red')
+    out = chalk.red(chalk.bold('bold') + ' red')
   })
   .add('cli-color', () => {
-    out = cliColor.red(cliColor.bold('bold' + ++index) + ' red')
+    out = cliColor.red(cliColor.bold('bold') + ' red')
   })
   .add('ansi-colors', () => {
-    out = ansi.red(ansi.bold('bold' + ++index) + ' red')
+    out = ansi.red(ansi.bold('bold') + ' red')
   })
   .add('kleur', () => {
-    out = kleur.red(kleur.bold('bold' + ++index) + ' red')
+    out = kleur.red(kleur.bold('bold') + ' red')
   })
   .add('kleur/colors', () => {
-    out = kleurColors.red(kleurColors.bold('bold' + ++index) + ' red')
+    out = kleurColors.red(kleurColors.bold('bold') + ' red')
   })
   .add('colorette', () => {
-    out = colorette.red(colorette.bold('bold' + ++index) + ' red')
+    out = colorette.red(colorette.bold('bold') + ' red')
   })
   .add('felt-pen', () => {
-    out = pen.red(pen.bold('bold' + ++index) + ' red')
+    out = pen.red(pen.bold('bold') + ' red')
   })
   .add('nanocolors', () => {
-    out = nanocolors.red(nanocolors.bold('bold' + ++index) + ' red')
+    out = nanocolors.red(nanocolors.bold('bold') + ' red')
   })
   .on('cycle', event => {
     let name = event.target.name.padEnd('kleur/colors  '.length)
     let hz = formatNumber(event.target.hz.toFixed(0)).padStart(10)
     process.stdout.write(`${name}${nanocolors.bold(hz)} ops/sec\n`)
-    index = 1e8
   })
   .run()
