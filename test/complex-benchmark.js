@@ -18,7 +18,6 @@ function formatNumber(number) {
 }
 
 let suite = new benchmark.Suite()
-let out // eslint-disable-line no-unused-vars
 let index = 1e8
 
 suite
