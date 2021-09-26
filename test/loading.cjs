@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+const { performance } = require('perf_hooks')
+
 let before
 function showTime(name) {
   let after = performance.now()
@@ -32,6 +34,10 @@ showTime('kleur/colors')
 before = performance.now()
 let colorette = require('colorette')
 showTime('colorette')
+
+before = performance.now()
+let pen = require('felt-pen')
+showTime('felt-pen')
 
 before = performance.now()
 let nanocolors = require('../index.cjs')

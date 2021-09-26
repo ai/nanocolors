@@ -58,7 +58,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-unicorn": "^36.0.0",
-    "felt-pen": "^1.0.1",
+    "felt-pen": "^1.0.2",
     "jest": "^27.2.2",
     "kleur": "^4.1.4",
     "lint-staged": "^11.1.2",
@@ -115,6 +115,7 @@
         "rules": {
           "import/newline-after-import": "off",
           "import/order": "off",
+          "node/no-unsupported-features/node-builtins": "off",
           "no-unused-vars": "off"
         }
       },

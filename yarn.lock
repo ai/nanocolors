@@ -2911,10 +2911,10 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
-felt-pen@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/felt-pen/-/felt-pen-1.0.1.tgz#4564cd00b3250dd2c8775becf6d32aa0efe1bccc"
-  integrity sha512-GAJUend7quIFrGJA5wTrdd1sDwMjCBXMaucRAx3tCNyqCJhyAWDhW8x2O4D/U2bJ2TJ4aSNUvCTJIgYyw97EnQ==
+felt-pen@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/felt-pen/-/felt-pen-1.0.2.tgz#c2169e5264baf38e34872e7c1f12e3656246564c"
+  integrity sha512-6fzrhgwLTmXZhVQ2q+oMnb9UVkgZ8E/qz38B5dJqgjrXjru0IUn4c/FWoo5F1dl9SlNiUOfZYLCF28mo2lXo3g==
 
 figgy-pudding@^3.5.1:
   version "3.5.2"
