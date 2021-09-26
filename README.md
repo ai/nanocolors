@@ -4,7 +4,7 @@
      src="./img/logo.svg"
      title="Nano Colors logo by Roman Shamin">
 
-A tiny and fast Node.js library for formatting terminal text with ANSI colors.
+A tiny and fast Node.js library to ANSI colors to terminal output.
 
 >Started as a fork
 > of [**@jorgebucaran**](https://github.com/jorgebucaran/)’s
