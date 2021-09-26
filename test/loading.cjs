@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-const { performance } = require('perf_hooks')
-
 let before
 function showTime(name) {
   let after = performance.now()
