@@ -55,7 +55,7 @@ cli-color        752,419 ops/sec
 ansi-colors    3,601,857 ops/sec
 kleur         15,185,239 ops/sec
 kleur/colors  21,113,231 ops/sec
-colorette     19,712,884 ops/sec
+colorette     47,657,004 ops/sec
 nanocolors    47,256,069 ops/sec
 ```
 
