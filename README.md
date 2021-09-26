@@ -123,9 +123,11 @@ Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.8.
    + red(bold(text))
    ```
 
-Automation: above changes can be applied automatically using [this codemod](https://gist.github.com/gavrix/ff051941ad9a19c8ea3224f38c30bc9a):
-```
-npx jscodeshift <path-to-js-files> -t https://gist.githubusercontent.com/gavrix/ff051941ad9a19c8ea3224f38c30bc9a/raw/09d81e93f880ecbc8f52dcf7819816c81e2ba340/chalk_nanocolors_transform.js
+Above changes can be applied automatically using
+[codemod](https://gist.github.com/gavrix/ff051941ad9a19c8ea3224f38c30bc9a):
+
+```sh
+npx jscodeshift FILES -t https://gist.githubusercontent.com/gavrix/ff051941ad9a19c8ea3224f38c30bc9a/raw/09d81e93f880ecbc8f52dcf7819816c81e2ba340/chalk_nanocolors_transform.js
 ```
 
 ## API

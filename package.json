@@ -173,7 +173,8 @@
       "Unprefix",
       "jorgebucaran",
       "lukeed",
-      "Deno"
+      "Deno",
+      "codemod"
     ]
   },
   "sharec": {
