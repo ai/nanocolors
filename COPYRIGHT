@@ -1,18 +1,4 @@
-Short version for non-laywers:
-  The Nano Colors project is licensed under MIT terms.
-
-Longer version:
-  Copyright 2021 Andrey Sitnik <andrey@sitnik.ru>
-
-  The Nano Colors project is licensed under the MIT license
-  <LICENSE> or <http://opensource.org/licenses/MIT>. Source
-  code if this project may not be copied, modified, or distributed
-  except according to those terms.
-
-
-The Nano Colors project includes codes derived from a third party.
-The following third party was used, and carry their own copyright
-notices and license terms:
+The Nano Colors project includes codes derived from a third party:
 
 * colorette. Nano Colors is fork of colorette.
 
