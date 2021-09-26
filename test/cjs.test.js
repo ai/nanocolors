@@ -21,10 +21,13 @@ it('prints colors', () => {
 })
 
 it('supports nested colors', () => {
-  let { green, red } = main.createColors(true)
+  let { green, red, bold, dim } = main.createColors(true)
   let c = esm.createColors(true)
   expect(green('a ' + red('b') + ' c')).toEqual(
     c.green('a ' + c.red('b') + ' c')
+  )
+  expect(bold('b ' + red('r ' + dim('d') + ' r') + ' b')).toEqual(
+    c.bold('b ' + c.red('r ' + c.dim('d') + ' r') + ' b')
   )
 })
 

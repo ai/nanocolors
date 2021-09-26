@@ -13,8 +13,9 @@ it('prints colors', () => {
 })
 
 it('supports nested colors', () => {
-  let { green, red } = main.createColors(true)
+  let { green, red, bold, dim } = main.createColors(true)
   expect(green('a ' + red('b') + ' c')).toMatchSnapshot()
+  expect(bold('b ' + red('r ' + dim('d') + ' r') + ' b')).toMatchSnapshot()
 })
 
 it('disables colors', () => {

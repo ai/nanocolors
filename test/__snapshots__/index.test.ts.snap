@@ -29,3 +29,5 @@ bgWhite       [47mbgWhite[49m"
 `;
 
 exports[`supports nested colors 1`] = `"[32ma [31mb[32m c[39m"`;
+
+exports[`supports nested colors 2`] = `"[1mb [31mr [2md[22m[1m r[39m b[22m"`;

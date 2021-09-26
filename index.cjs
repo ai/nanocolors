@@ -19,8 +19,8 @@ let isColorSupported =
 
 let nope = s => String(s)
 
-function color(open, close, closeRegexp) {
-  function func (s) {
+function color(open, close, closeRegexp, restore = open) {
+  function func(s) {
     if (!s || !s.length) {
       if (s === '') {
         return ''
@@ -30,7 +30,7 @@ function color(open, close, closeRegexp) {
     } else {
       return (
         open +
-        (!!~s.indexOf(close, 4) ? s.replace(closeRegexp, open) : s) +
+        (!!~s.indexOf(close, 4) ? s.replace(closeRegexp, restore) : s) +
         close
       )
     }
@@ -48,8 +48,8 @@ function createColors(enabled = isColorSupported) {
     return {
       isColorSupported: true,
       reset: s => `\x1b[0m${s}\x1b[0m`,
-      bold: color('\x1b[1m', '\x1b[22m', /\x1b\[22m/g),
-      dim: color('\x1b[2m', '\x1b[22m', /\x1b\[22m/g),
+      bold: color('\x1b[1m', '\x1b[22m', /\x1b\[22m/g, '\x1b[22m\x1b[1m'),
+      dim: color('\x1b[2m', '\x1b[22m', /\x1b\[22m/g, '\x1b[22m\x1b[2m'),
       italic: color('\x1b[3m', '\x1b[23m', /\x1b\[23m/g),
       underline: color('\x1b[4m', '\x1b[24m', /\x1b\[24m/g),
       inverse: color('\x1b[7m', '\x1b[27m', /\x1b\[27m/g),
