@@ -115,6 +115,7 @@
         "rules": {
           "import/newline-after-import": "off",
           "import/order": "off",
+          "node/no-unsupported-features/node-builtins": "off",
           "no-unused-vars": "off"
         }
       },
