@@ -18,7 +18,6 @@ function formatNumber(number) {
 }
 
 let suite = new benchmark.Suite()
-
 let out
 let index = 1e8
 
