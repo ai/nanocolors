@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.2.8
+* Reduced package size.
+
 ## 0.2.7
 * Fixed nested `bold` and `dim`.
 * Reduced package size.
