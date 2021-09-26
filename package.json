@@ -117,6 +117,12 @@
           "import/order": "off",
           "no-unused-vars": "off"
         }
+      },
+      {
+        "files": "test/*benchmark.js",
+        "rules": {
+          "no-unused-vars": "off"
+        }
       }
     ]
   },

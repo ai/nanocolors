@@ -56,6 +56,7 @@ ansi-colors    3,601,857 ops/sec
 kleur         15,185,239 ops/sec
 kleur/colors  21,113,231 ops/sec
 colorette     47,657,004 ops/sec
+felt-pen      13,660,519 ops/sec
 nanocolors    47,256,069 ops/sec
 ```
 
@@ -63,13 +64,14 @@ Benchmark for complex use cases:
 
 ```
 $ ./test/complex-benchmark.js
-chalk          3,839,689 ops/sec
-cli-color        476,711 ops/sec
-ansi-colors    1,554,907 ops/sec
-kleur          3,626,680 ops/sec
-kleur/colors   4,068,790 ops/sec
-colorette      4,663,525 ops/sec
-nanocolors     5,110,348 ops/sec
+chalk          2,903,889 ops/sec
+cli-color        461,213 ops/sec
+ansi-colors    1,250,789 ops/sec
+kleur          2,641,196 ops/sec
+kleur/colors   2,966,036 ops/sec
+colorette      3,241,682 ops/sec
+felt-pen       2,940,569 ops/sec
+nanocolors     3,147,313 ops/sec
 ```
 
 Library loading time:
@@ -95,6 +97,7 @@ cli-color    1249 kB
 ansi-colors    25 kB
 kleur          21 kB
 colorette      16 kB
+felt-pen        6 kB
 nanocolors     16 kB
 ```
 
