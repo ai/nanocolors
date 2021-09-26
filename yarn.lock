@@ -1220,11 +1220,6 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
 
-at-least-node@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
-  integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
-
 atob@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
@@ -1700,14 +1695,14 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-clean-publish@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/clean-publish/-/clean-publish-2.2.0.tgz#3d249934128757e457dc060511a056d32487f38d"
-  integrity sha512-U+/Y5YXbxnqWlh8y/toKSEGbMvIvsgfkfJ7yK0v0uQ1mz07lNNSxceY7XaFweEw8LFQo8Al3H7SuQHXbf5Xw8g==
+clean-publish@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/clean-publish/-/clean-publish-3.0.1.tgz#292cc6e42a1001f59ed1430d0edf136fee46cc30"
+  integrity sha512-knWD655d7Ya3jyNBe6NnnaxkVtn2sreqbuWieSX5VUHelExp4Ld/5thBDqznQNSRE/8FZiCBDxdJacwYEbQPlA==
   dependencies:
     cross-spawn "^7.0.3"
-    fs-extra "^9.1.0"
-    lilconfig "^2.0.2"
+    fs-extra "^10.0.0"
+    lilconfig "^2.0.3"
 
 clean-regexp@^1.0.0:
   version "1.0.0"
@@ -3039,12 +3034,11 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-fs-extra@^9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
-  integrity sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==
+fs-extra@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.0.tgz#9ff61b655dde53fb34a82df84bb214ce802e17c1"
+  integrity sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==
   dependencies:
-    at-least-node "^1.0.0"
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
     universalify "^2.0.0"
@@ -4359,7 +4353,7 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lilconfig@^2.0.2, lilconfig@^2.0.3:
+lilconfig@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.0.3.tgz#68f3005e921dafbd2a2afb48379986aa6d2579fd"
   integrity sha512-EHKqr/+ZvdKCifpNrJCKxBTgk5XupZA3y/aCPY9mxfgBzmgh93Mt/WqjjQ38oMxXuvDokaKiM3lAgvSH2sjtHg==
@@ -4815,15 +4809,17 @@ nanocolors@^0.1.0, nanocolors@^0.1.1, nanocolors@^0.1.12, nanocolors@^0.1.5:
   resolved "https://registry.yarnpkg.com/nanocolors/-/nanocolors-0.1.12.tgz#8577482c58cbd7b5bb1681db4cf48f11a87fd5f6"
   integrity sha512-2nMHqg1x5PU+unxX7PGY7AuYxl2qDx7PSrTRjizr8sxdd3l/3hBuWWaki62qmtYm2U5i4Z5E7GbjlyDFhs9/EQ==
 
-nanocolors@^0.2.2:
+nanocolors@^0.2.2, nanocolors@^0.2.6:
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/nanocolors/-/nanocolors-0.2.6.tgz#2e7815d25c04aaa43e54b9f0d6d21060172e5831"
   integrity sha512-lP8hjPSXTQ7qpYl5hFPVTBXGdd7+Rn3oi8GqIPNZP63L09tewRzWYFxAy26B1BYOOYaPWgmVF/BFIhDAHihwUQ==
 
 nanoid@^3.1.25:
-  version "3.1.25"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.25.tgz#09ca32747c0e543f0e1814b7d3793477f9c8e152"
-  integrity sha512-rdwtIXaXCLFAQbnfqDRnI6jaRHp9fTcYBjtFKE8eezcZ7LuLjhUaQGNeMXf1HmRoCH32CLz6XwX0TtxEOS/A3Q==
+  version "3.1.26"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.26.tgz#c1a335a2a365ff4394f4f62137cd96297533f526"
+  integrity sha512-f2KGmBOi1LcVIg7mz8tBR5Ma1cu+gnMk3dS13Ig5gAUbp4Ia5Zpci6KvNgy4nJMN9jR1ELw/YU7X3dRzE18aQQ==
+  dependencies:
+    nanocolors "^0.2.6"
 
 nanomatch@^1.2.9:
   version "1.2.13"
