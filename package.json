@@ -1,6 +1,6 @@
 {
   "name": "nanocolors",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "4x times faster than chalk and use 5x less space in node_modules",
   "keywords": [
     "color",
@@ -46,9 +46,9 @@
     "ansi-colors": "^4.1.1",
     "benchmark": "^2.1.4",
     "chalk": "^4.1.2",
-    "clean-publish": "^3.0.1",
+    "clean-publish": "^3.0.2",
     "cli-color": "^2.0.0",
-    "colorette": "^2.0.11",
+    "colorette": "^2.0.12",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.2",
@@ -174,7 +174,8 @@
       "Unprefix",
       "jorgebucaran",
       "lukeed",
-      "Deno"
+      "Deno",
+      "codemod"
     ]
   },
   "sharec": {

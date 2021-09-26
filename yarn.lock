@@ -1695,10 +1695,10 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-clean-publish@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/clean-publish/-/clean-publish-3.0.1.tgz#292cc6e42a1001f59ed1430d0edf136fee46cc30"
-  integrity sha512-knWD655d7Ya3jyNBe6NnnaxkVtn2sreqbuWieSX5VUHelExp4Ld/5thBDqznQNSRE/8FZiCBDxdJacwYEbQPlA==
+clean-publish@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/clean-publish/-/clean-publish-3.0.2.tgz#caab819ec363452d2c40e09acafbfd3fe3a598a0"
+  integrity sha512-MO/w+VQQwX2nE1R8B1fO5gYeZJi2A6sHYDfuVXrxViViHP1sLLUCXO60cbsQTaRPvnKH9AsAl9DZNaxVDNi7KA==
   dependencies:
     cross-spawn "^7.0.3"
     fs-extra "^10.0.0"
@@ -1799,15 +1799,15 @@ colord@^2.0.1, colord@^2.6:
   resolved "https://registry.yarnpkg.com/colord/-/colord-2.8.0.tgz#64fb7aa03de7652b5a39eee50271a104c2783b12"
   integrity sha512-kNkVV4KFta3TYQv0bzs4xNwLaeag261pxgzGQSh4cQ1rEhYjcTJfFRP0SDlbhLONg0eSoLzrDd79PosjbltufA==
 
-colorette@^1.2.2, colorette@^1.4.0:
+colorette@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.4.0.tgz#5190fbb87276259a86ad700bff2c6d6faa3fca40"
   integrity sha512-Y2oEozpomLn7Q3HFP7dpww7AtMJplbM9lGZP6RDfHqmbeRjiwRg4n6VM6j4KLmRke85uWEI7JqF17f3pqdRA0g==
 
-colorette@^2.0.11:
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/colorette/-/colorette-2.0.11.tgz#3b4cf8407edb24dd54fdbfd350f5ed252abbc64a"
-  integrity sha512-ZqwF8QRKzkhpr6aOvqzsZgtdOh+ItZBrbHDJ3pEAOoLr79oVSRxviVKDHVvrBmUhK5NcGRT9RATQknOan52UXQ==
+colorette@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/colorette/-/colorette-2.0.12.tgz#7938ab254e7bb1bba29b0fd1b4cc168889ca4d74"
+  integrity sha512-lHID0PU+NtFzeNCwTL6JzUKdb6kDpyEjrwTD1H0cDZswTbsjLh2wTV2Eo2sNZLc0oSg0a5W1AI4Nj7bX4iIdjA==
 
 combined-stream@^1.0.8:
   version "1.0.8"
@@ -4814,17 +4814,15 @@ nanocolors@^0.1.0, nanocolors@^0.1.1, nanocolors@^0.1.12, nanocolors@^0.1.5:
   resolved "https://registry.yarnpkg.com/nanocolors/-/nanocolors-0.1.12.tgz#8577482c58cbd7b5bb1681db4cf48f11a87fd5f6"
   integrity sha512-2nMHqg1x5PU+unxX7PGY7AuYxl2qDx7PSrTRjizr8sxdd3l/3hBuWWaki62qmtYm2U5i4Z5E7GbjlyDFhs9/EQ==
 
-nanocolors@^0.2.2, nanocolors@^0.2.6:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/nanocolors/-/nanocolors-0.2.6.tgz#2e7815d25c04aaa43e54b9f0d6d21060172e5831"
-  integrity sha512-lP8hjPSXTQ7qpYl5hFPVTBXGdd7+Rn3oi8GqIPNZP63L09tewRzWYFxAy26B1BYOOYaPWgmVF/BFIhDAHihwUQ==
+nanocolors@^0.2.2, nanocolors@^0.2.8:
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/nanocolors/-/nanocolors-0.2.9.tgz#319c5e7a73571abd60e4d273150c2cb95017ac5b"
+  integrity sha512-aymgS4Xe0LMqHOHl7jSUEkFh/6O/pcF0j61dBtreQZ1nmbyYdYjSYSJzz0iPLbKPkMtSmdRgyBGywNZGjKOEfw==
 
 nanoid@^3.1.25:
-  version "3.1.26"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.26.tgz#c1a335a2a365ff4394f4f62137cd96297533f526"
-  integrity sha512-f2KGmBOi1LcVIg7mz8tBR5Ma1cu+gnMk3dS13Ig5gAUbp4Ia5Zpci6KvNgy4nJMN9jR1ELw/YU7X3dRzE18aQQ==
-  dependencies:
-    nanocolors "^0.2.6"
+  version "3.1.28"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.28.tgz#3c01bac14cb6c5680569014cc65a2f26424c6bd4"
+  integrity sha512-gSu9VZ2HtmoKYe/lmyPFES5nknFrHa+/DT9muUFWFMi6Jh9E1I7bkvlQ8xxf1Kos9pi9o8lBnIOkatMhKX/YUw==
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -6111,10 +6109,10 @@ sharec-nanomatch@^2.10.2:
     snapdragon-capture "^0.2.0"
     to-regex "^3.0.1"
 
-sharec-schema@^2.10.2:
-  version "2.10.2"
-  resolved "https://registry.yarnpkg.com/sharec-schema/-/sharec-schema-2.10.2.tgz#4342ce2a392fc85749279985907bc055cab43fa3"
-  integrity sha512-mzeITBUStZH4/M5o+8lxFe4UOY3Vf6upNXYq9V9ikVtpT4KpuAXoNyeetOFswZcKbLnh63fft+rgs/2vBhZ7Fw==
+sharec-schema@^2.10.3:
+  version "2.10.3"
+  resolved "https://registry.yarnpkg.com/sharec-schema/-/sharec-schema-2.10.3.tgz#6c81e7ebeb23bcc9e2f996b8a326e4f0ce5e57fa"
+  integrity sha512-/1S4FWug71Syr3hL2KUZIsAAy7Zvas7BpD4PINxdC7c4c4yje8qvncNyq1SQgw34mEhQmK5dUJzIFT96eb1vzw==
   dependencies:
     js-yaml "^4.0.0"
     json8 "^1.0.3"
@@ -6132,11 +6130,10 @@ sharec-utils@^2.10.2:
     slash "^3.0.0"
 
 sharec@^2.10.2:
-  version "2.10.2"
-  resolved "https://registry.yarnpkg.com/sharec/-/sharec-2.10.2.tgz#8d526ed257cec654226377308ee1d783ae3a45d2"
-  integrity sha512-1WfA1C6SARECMoc0RojDO5t/0Bie49kr9hkDsBT9T1GFrzrTSfXi2qPG5n2qtli865e8Sat+fm/UnI7k0qC+dA==
+  version "2.10.3"
+  resolved "https://registry.yarnpkg.com/sharec/-/sharec-2.10.3.tgz#758288f298e4154a773a12f5e15c55f965c39f85"
+  integrity sha512-4xd9SanHqiNfoEdAlq8J6CmOhgqSPq7fAM3rQ6bIxQRwPc5c2WJpTrv/XbYqo3AWj9eKquGq1cSQ4XnRQ187SQ==
   dependencies:
-    colorette "^1.2.2"
     detect-indent "^6.0.0"
     editorconfig "^0.15.3"
     enquirer "^2.3.6"
@@ -6146,8 +6143,9 @@ sharec@^2.10.2:
     mico-spinner "^1.1.0"
     minimatch "^3.0.4"
     minimist "^1.2.0"
+    nanocolors "^0.2.8"
     sharec-nanomatch "^2.10.2"
-    sharec-schema "^2.10.2"
+    sharec-schema "^2.10.3"
     sharec-utils "^2.10.2"
     shelljs "^0.8.3"
     slash "^3.0.0"
