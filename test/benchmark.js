@@ -7,6 +7,7 @@ import * as kleurColors from 'kleur/colors'
 import chalk from 'chalk'
 import ansi from 'ansi-colors'
 import cliColor from 'cli-color'
+import * as pen from 'felt-pen'
 
 import * as nanocolors from '../index.js'
 
@@ -18,31 +19,38 @@ function formatNumber(number) {
 
 let suite = new benchmark.Suite()
 
+let out // eslint-disable-line no-unused-vars
+let index = 1e8
+
 suite
   .add('chalk', () => {
-    chalk.red(chalk.bold('bold') + ' red')
+    out = chalk.red(chalk.bold('bold' + ++index) + ' red')
   })
   .add('cli-color', () => {
-    cliColor.red(cliColor.bold('bold') + ' red')
+    out = cliColor.red(cliColor.bold('bold' + ++index) + ' red')
   })
   .add('ansi-colors', () => {
-    ansi.red(ansi.bold('bold') + ' red')
+    out = ansi.red(ansi.bold('bold' + ++index) + ' red')
   })
   .add('kleur', () => {
-    kleur.red(kleur.bold('bold') + ' red')
+    out = kleur.red(kleur.bold('bold' + ++index) + ' red')
   })
   .add('kleur/colors', () => {
-    kleurColors.red(kleurColors.bold('bold') + ' red')
+    out = kleurColors.red(kleurColors.bold('bold' + ++index) + ' red')
   })
   .add('colorette', () => {
-    colorette.red(colorette.bold('bold') + ' red')
+    out = colorette.red(colorette.bold('bold' + ++index) + ' red')
+  })
+  .add('felt-pen', () => {
+    out = pen.red(pen.bold('bold' + ++index) + ' red')
   })
   .add('nanocolors', () => {
-    nanocolors.red(nanocolors.bold('bold') + ' red')
+    out = nanocolors.red(nanocolors.bold('bold' + ++index) + ' red')
   })
   .on('cycle', event => {
     let name = event.target.name.padEnd('kleur/colors  '.length)
     let hz = formatNumber(event.target.hz.toFixed(0)).padStart(10)
     process.stdout.write(`${name}${nanocolors.bold(hz)} ops/sec\n`)
+    index = 1e8
   })
   .run()

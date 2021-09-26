@@ -2911,6 +2911,11 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
+felt-pen@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/felt-pen/-/felt-pen-1.0.0.tgz#1072b3ef43dc22a263d57e91bb3f9a08fd9f0e65"
+  integrity sha512-Os8m3lHvWIW6QMu380XTOBeHjgfzxtC3edlPPMXfeDc8YJl1ljqWzlbHyA6h9fDkkoSMz0x5Kjb8YbLwEspX7A==
+
 figgy-pudding@^3.5.1:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
