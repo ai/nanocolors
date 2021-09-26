@@ -14,7 +14,7 @@ A tiny and fast Node.js library for formatting terminal text with ANSI colors.
 > See [changes](https://github.com/ai/nanocolors/wiki/Colorette-Changes)
 > between Nano Colors and `colorette`.
 
-* It is **4 times faster** than `chalk`. Both loading and calls.
+* It is **4 times faster** than `chalk` for simple use cases.
 * **No dependencies.** It takes **5 times less space** in `node_modules`
   than `chalk`.
 * **Actively maintained.** Used in many big projects
@@ -46,10 +46,10 @@ console.log(
 
 ## Benchmarks
 
-Function calling time:
+Benchmark for simple use case:
 
 ```
-$ ./test/benchmark.js
+$ ./test/simple-benchmark.js
 chalk         11,608,010 ops/sec
 cli-color        752,419 ops/sec
 ansi-colors    3,601,857 ops/sec
@@ -57,6 +57,19 @@ kleur         15,185,239 ops/sec
 kleur/colors  21,113,231 ops/sec
 colorette     47,657,004 ops/sec
 nanocolors    47,256,069 ops/sec
+```
+
+Benchmark for complex use cases:
+
+```
+$ ./test/complex-benchmark.js
+chalk          3,839,689 ops/sec
+cli-color        476,711 ops/sec
+ansi-colors    1,554,907 ops/sec
+kleur          3,626,680 ops/sec
+kleur/colors   4,068,790 ops/sec
+colorette      4,663,525 ops/sec
+nanocolors     5,110,348 ops/sec
 ```
 
 Library loading time:
