@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.2.11
+* Fixed browser build.
+
 ## 0.2.10
 * Improved performance in CJS and browser versions.
 
