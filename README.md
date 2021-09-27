@@ -84,6 +84,7 @@ ansi-colors    1.101 ms
 kleur          1.628 ms
 kleur/colors   0.508 ms
 colorette      1.034 ms
+felt-pen       0.405 ms
 nanocolors     0.486 ms
 ```
 
