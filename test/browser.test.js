@@ -50,9 +50,11 @@ describe('CJS', () => {
   it('copies all methods', () => {
     let created = Object.keys(browserCjs.createColors(true))
     expect(Object.keys(browserCjs).sort()).toEqual(
-      created.concat(['createColors']).sort()
+      created.concat(['createColors', 'default']).sort()
     )
-    expect(Object.keys(browserCjs).sort()).toEqual(Object.keys(main).sort())
+    expect(Object.keys(browserCjs).sort()).toEqual(
+      Object.keys(main).concat(['default']).sort()
+    )
   })
 
   it('converts number to string', () => {

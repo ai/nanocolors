@@ -32,4 +32,5 @@ function createColors() {
 }
 
 module.exports = createColors()
+module.exports.default = module.exports
 module.exports.createColors = createColors
