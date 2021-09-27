@@ -25,7 +25,7 @@ function color(open, close, closeRegexp, restore = open) {
       if (s === '') {
         return ''
       } else {
-        return open + String(s) + close
+        return open + s + close
       }
     } else {
       return (
