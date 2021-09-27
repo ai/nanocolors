@@ -1,4 +1,4 @@
-let nope = s => String(s)
+let nope = s => '' + s
 
 export let isColorSupported = false
 export let reset = nope

@@ -1,4 +1,4 @@
-let nope = s => String(s)
+let nope = s => '' + s
 
 function createColors() {
   return {
