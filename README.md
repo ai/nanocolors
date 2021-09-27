@@ -58,6 +58,7 @@ kleur/colors  21,113,231 ops/sec
 colorette     47,657,004 ops/sec
 felt-pen      13,660,519 ops/sec
 nanocolors    47,256,069 ops/sec
+picocolors    47,478,006 ops/sec
 ```
 
 Benchmark for complex use cases:
@@ -72,6 +73,7 @@ kleur/colors   2,966,036 ops/sec
 colorette      3,241,682 ops/sec
 felt-pen       2,940,569 ops/sec
 nanocolors     3,147,313 ops/sec
+picocolors     3,887,533 ops/sec
 ```
 
 Library loading time:
@@ -86,6 +88,7 @@ kleur/colors   0.508 ms
 colorette      1.034 ms
 felt-pen       0.405 ms
 nanocolors     0.486 ms
+picocolors     0.470 ms
 ```
 
 The space in `node_modules` including sub-dependencies:
@@ -100,6 +103,7 @@ kleur          21 kB
 colorette      16 kB
 felt-pen       10 kB
 nanocolors     16 kB
+picocolors     10 kB
 ```
 
 Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.8.
