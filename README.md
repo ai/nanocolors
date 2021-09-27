@@ -98,7 +98,7 @@ cli-color    1249 kB
 ansi-colors    25 kB
 kleur          21 kB
 colorette      16 kB
-felt-pen        6 kB
+felt-pen       10 kB
 nanocolors     16 kB
 ```
 
