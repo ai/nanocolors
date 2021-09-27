@@ -62,6 +62,7 @@
     "jest": "^27.2.2",
     "kleur": "^4.1.4",
     "lint-staged": "^11.1.2",
+    "picocolors": "^0.1.0",
     "prettier": "^2.3.2",
     "print-snapshots": "^0.4.0",
     "simple-git-hooks": "^2.6.1",

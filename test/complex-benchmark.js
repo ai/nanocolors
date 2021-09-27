@@ -8,6 +8,7 @@ import chalk from 'chalk'
 import ansi from 'ansi-colors'
 import cliColor from 'cli-color'
 import * as pen from 'felt-pen'
+import * as picocolors from 'picocolors'
 
 import * as nanocolors from '../index.js'
 
@@ -52,6 +53,11 @@ suite
   .add('nanocolors', () => {
     out = nanocolors.red(
       nanocolors.green('green') + ' red ' + nanocolors.bold(++index)
+    )
+  })
+  .add('picocolors', () => {
+    out = picocolors.red(
+      picocolors.green('green') + ' red ' + picocolors.bold(`${++index}`)
     )
   })
   .on('cycle', event => {

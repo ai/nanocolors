@@ -8,6 +8,7 @@ import chalk from 'chalk'
 import ansi from 'ansi-colors'
 import cliColor from 'cli-color'
 import * as pen from 'felt-pen'
+import * as picocolors from 'picocolors'
 
 import * as nanocolors from '../index.js'
 
@@ -44,6 +45,9 @@ suite
   })
   .add('nanocolors', () => {
     out = nanocolors.red(nanocolors.bold('bold') + ' red')
+  })
+  .add('picocolors', () => {
+    out = picocolors.red(picocolors.bold('bold') + ' red')
   })
   .on('cycle', event => {
     let name = event.target.name.padEnd('kleur/colors  '.length)

@@ -42,3 +42,7 @@ showTime('felt-pen')
 before = performance.now()
 let nanocolors = require('../index.cjs')
 showTime('nanocolors')
+
+before = performance.now()
+let picocolors = require('picocolors')
+showTime('picocolors')

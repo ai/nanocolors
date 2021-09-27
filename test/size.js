@@ -41,6 +41,7 @@ async function start() {
   await benchmark('colorette')
   await benchmark('felt-pen')
   await benchmark('nanocolors')
+  await benchmark('picocolors')
 }
 
 start()
