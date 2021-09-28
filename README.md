@@ -50,30 +50,30 @@ Benchmark for simple use case:
 
 ```
 $ ./test/simple-benchmark.js
-chalk         11,608,010 ops/sec
-cli-color        752,419 ops/sec
-ansi-colors    3,601,857 ops/sec
-kleur         15,185,239 ops/sec
-kleur/colors  21,113,231 ops/sec
-colorette     47,657,004 ops/sec
-felt-pen      13,660,519 ops/sec
-nanocolors    47,256,069 ops/sec
-picocolors    47,478,006 ops/sec
+chalk         10,242,983 ops/sec
+cli-color        723,530 ops/sec
+ansi-colors    3,604,458 ops/sec
+kleur         13,086,656 ops/sec
+kleur/colors  15,955,740 ops/sec
+colorette     41,579,227 ops/sec
+felt-pen      13,569,353 ops/sec
+nanocolors    40,832,014 ops/sec
+picocolors    41,452,209 ops/sec
 ```
 
 Benchmark for complex use cases:
 
 ```
 $ ./test/complex-benchmark.js
-chalk          2,903,889 ops/sec
-cli-color        461,213 ops/sec
-ansi-colors    1,250,789 ops/sec
-kleur          2,641,196 ops/sec
-kleur/colors   2,966,036 ops/sec
-colorette      3,241,682 ops/sec
-felt-pen       2,940,569 ops/sec
-nanocolors     3,147,313 ops/sec
-picocolors     3,887,533 ops/sec
+chalk          1,937,337 ops/sec
+cli-color        310,769 ops/sec
+ansi-colors      726,024 ops/sec
+kleur          1,241,189 ops/sec
+kleur/colors   1,685,363 ops/sec
+colorette      1,867,842 ops/sec
+felt-pen       2,211,771 ops/sec
+nanocolors     2,693,805 ops/sec
+picocolors     4,037,949 ops/sec
 ```
 
 Library loading time:
@@ -106,7 +106,7 @@ nanocolors     16 kB
 picocolors     10 kB
 ```
 
-Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.8.
+Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.10.
 
 ## Replacing `chalk`
 

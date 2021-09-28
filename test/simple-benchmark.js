@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
+// Benchmark results are unstable. To have more stable results:
+// 1. Restart OS. Do not run any applications. Put power cable to laptop.
+// 2. Run tests 5 times.
+// 3. Took the best result for each candidate.
+
 import benchmark from 'benchmark'
 import * as colorette from 'colorette'
 import kleur from 'kleur'
@@ -53,5 +58,8 @@ suite
     let name = event.target.name.padEnd('kleur/colors  '.length)
     let hz = formatNumber(event.target.hz.toFixed(0)).padStart(10)
     process.stdout.write(`${name}${nanocolors.bold(hz)} ops/sec\n`)
+  })
+  .on('error', event => {
+    process.stderr.write(nanocolors.red(event.target.error.toString()) + '\n')
   })
   .run()
