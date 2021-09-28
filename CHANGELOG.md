@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.2.12
+* Fixed React Native support.
+
 ## 0.2.11
 * Fixed browser build.
 
