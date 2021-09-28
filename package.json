@@ -23,6 +23,7 @@
   },
   "main": "index.cjs",
   "module": "index.js",
+  "react-native": "index.browser.js",
   "exports": {
     ".": {
       "browser": "./index.browser.js",
