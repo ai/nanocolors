@@ -131,7 +131,8 @@ Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.10.
    + red(bold(text))
    ```
 
-4. If you used template tag, then use the [nanocolors-template](https://github.com/usmanyunusov/nanocolors-template):
+4. If you used template tag, then use
+   the [`nanocolors-template`](https://github.com/usmanyunusov/nanocolors-template):
 
    ```diff
    - import chalk from 'chalk'
