@@ -131,6 +131,16 @@ Test configuration: ThinkPad X1 Carbon Gen 9, Fedora 34, Node.js 16.10.
    + red(bold(text))
    ```
 
+4. If you used template tag, then use the [nanocolors-template](https://github.com/usmanyunusov/nanocolors-template):
+
+   ```diff
+   - import chalk from 'chalk'
+   + import { colorize } from 'nanocolors-template'
+
+   - chalk.yellow.bold`yellow {red ${"text"}}`
+   + colorize`{yellow.bold yellow {red ${"text"}}}`
+   ```
+
 Above changes can be applied automatically using
 [codemod](https://gist.github.com/gavrix/ff051941ad9a19c8ea3224f38c30bc9a):
 
