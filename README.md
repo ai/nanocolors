@@ -4,6 +4,10 @@
      src="./img/logo.svg"
      title="Nano Colors logo by Roman Shamin">
 
+**DEPRECATED:** Use
+**[`picocolors`](https://github.com/alexeyraspopov/picocolors)** instead.
+It is 3 times smaller and 50% faster.
+
 A tiny and fast Node.js library to ANSI colors to terminal output.
 
 >Started as a fork
