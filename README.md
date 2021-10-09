@@ -1,6 +1,4 @@
-# Nano Colors
-
-**DEPRECATED:** Use
+# DEPRECATED: Use
 **[`picocolors`](https://github.com/alexeyraspopov/picocolors)** instead.
 It is 3 times smaller and 50% faster.
 
