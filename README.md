@@ -1,4 +1,8 @@
-# DEPRECATED: Use **[`picocolors`](https://github.com/alexeyraspopov/picocolors)** instead. It is 3 times smaller and 50% faster.
+# Deprecated
+
+**DEPRECATED:** Use
+**[`picocolors`](https://github.com/alexeyraspopov/picocolors)** instead.
+It is 3 times smaller and 50% faster.
 
 The space in node_modules including sub-dependencies:
 
